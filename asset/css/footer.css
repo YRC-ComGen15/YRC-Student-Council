@@ -1,0 +1,17 @@
+.footer {
+    background-color: #FF1493;
+}
+
+.footer-logo {
+    width: 15%;
+}
+
+.a-footer {
+    transition: all 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.a-footer:hover {
+    color: #1814ff;
+}

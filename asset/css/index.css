@@ -1,0 +1,53 @@
+@font-face {
+    font-family: ibm;
+    src: url(../../Framework/font/IBMPlexSansThai-Medium.ttf);
+}
+
+:root {
+    --color-primary: #FF1493;
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-primary);
+}
+
+body,
+html {
+    font-family: ibm;
+}
+
+.bg-pink {
+    background-color: var(--color-primary);
+}
+
+.logo {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+
+.round {
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 5px solid var(--color-primary);
+    padding: 5px;
+    font-size: 31px;
+    height: 130px;
+    width: 130px;
+    box-shadow: 0 2px 4px darkslategray;
+}
+
+.text-round {
+    color: var(--color-primary);
+}
+
+.footer {
+    background-color: var(--color-primary);
+}
