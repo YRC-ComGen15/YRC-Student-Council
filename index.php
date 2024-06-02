@@ -47,7 +47,7 @@ require_once("./config/conn.php");
 
         ?>
         <!-- banner -->
-        <div class="d-block w-100">
+        <div class="d-block w-100 mt-5">
             <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
         </div>
 
@@ -116,7 +116,7 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-3 mt-3">
-                    <a href="" class="round m-auto d-flex">
+                    <a href="./project.php" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-chalkboard"></i></p>
                     </a>
                     <h4 class="text-center mt-2">โครงการ</h4>

@@ -49,10 +49,11 @@ require_once("../config/conn.php");
         <div class="d-block w-100">
             <img src="../img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
         </div>
+    </header>
 
-        <main class="p-5">
-
-        </main>
+    <main class="p-5">
+        
+    </main>
 
     <footer class="d-block">
         <?php include_once("../component/Footer.php") ?>
