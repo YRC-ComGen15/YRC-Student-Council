@@ -31,7 +31,7 @@ require_once("../config/conn.php");
 
 <body>
     <header>
-        <?php include_once("../component/Header.php") ?>
+        <?php include_once("./Header.php") ?>
         <?php
 
         $banner2 = "banner";
@@ -46,7 +46,7 @@ require_once("../config/conn.php");
 
         ?>
         <!-- banner -->
-        <div class="d-block w-100">
+        <div class="d-block w-100 mt-5">
             <img src="../img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
         </div>
     </header>
@@ -56,7 +56,7 @@ require_once("../config/conn.php");
     </main>
 
     <footer class="d-block">
-        <?php include_once("../component/Footer.php") ?>
+        <?php include_once("./Footer.php") ?>
     </footer>
 
     <!-- script bootstrap -->

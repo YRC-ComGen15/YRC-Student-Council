@@ -26,7 +26,6 @@ require_once("./config/conn.php");
     <!-- fontawsome -->
     <link rel="stylesheet" href="./Framework/fontawsome/css/all.css">
 
-
 </head>
 
 <body>
