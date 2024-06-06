@@ -26,6 +26,9 @@ require_once("./config/conn.php");
     <!-- fontawsome -->
     <link rel="stylesheet" href="./Framework/fontawsome/css/all.css">
 
+    <!-- project -->
+    <link rel="stylesheet" href="./asset/css/project.css">
+
 
 </head>
 
@@ -65,8 +68,9 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3 ">
-                    <a href="./LearnTogether/index.php" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-book"></i></p>
+                    <a href="./LearnTogether/index.php" class="round m-auto d-flex logo-learntogether corousel-inner">
+                        <p href="" class="m-auto text-round "></p>
+                        <img src="./img/learntogether logo.png" class="w-100 h-100" alt="">
                     </a>
                     <h4 class="text-center mt-2">YRC We learn to get her</h4>
                 </div>

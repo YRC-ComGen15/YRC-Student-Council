@@ -240,6 +240,8 @@ require_once("./config/conn.php");
         <div class="p-5">
             <h1 class="text-center">ประชาสัมพันธ์</h1>
 
+            <?php include_once(".//component/Slider.php"); ?>
+            
         </div>
 
     </main>
