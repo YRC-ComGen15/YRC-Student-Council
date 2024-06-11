@@ -79,6 +79,25 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                             </div>
                         </div>
 
+                        <!-- แบนเนอร์เลื่อน -->
+                        <?php
+                        $sql = "SELECT * FROM banner3";
+                        $stmt = $pdo->query($sql);
+                        ?>
+
+                        <h3 class="mt-3">Banner สภานักเรียน2 <a href="" class="btn btn-success">+</a></h3>
+
+                        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                            <div class="d-block box mt-3">
+                                <a href="" class="m-auto">
+                                    <img src="../img/banner/<?php echo isset($banner2['content']) ? htmlspecialchars($banner2['content']) : ''; ?>" class="w-100" alt="">
+                                </a>
+                                <div class="box-input">
+                                    <input type="file" class="form-control" name="banner2" accept="image/png, image/gif, image/jpeg">
+                                </div>
+                            </div>
+                        <?php } ?>
+
                         <input type="submit" class="btn btn-primary w-100 mt-3" value="บันทึก">
                     </form>
 

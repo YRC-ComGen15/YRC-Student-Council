@@ -26,7 +26,7 @@
                 <a href="./" class="nav-link"> YRC We HealthCare</a>
             </li>
             <li class="nav-item">
-                <a href="./" class="nav-link"> YRC WE LEARNTOGET(HER)</a>
+                <a href="./LearnTogether/index.php" class="nav-link"> YRC WE LEARNTOGET(HER)</a>
             </li>
             <li class="nav-item">
                 <a href="./" class="nav-link"> YRC Fun Festival SS.3</a>
