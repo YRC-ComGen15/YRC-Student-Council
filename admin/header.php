@@ -16,7 +16,7 @@
                 <a href="" class="nav-link"><i class="fa-solid fa-chart-simple"></i> ข้อมูลทางสถิติ</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link"><i class="fa-solid fa-bullhorn"></i> ประชาสัมพันธ์</a>
+                <a href="./announce.php" class="nav-link"><i class="fa-solid fa-bullhorn"></i> ประชาสัมพันธ์</a>
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link"><i class="fa-solid fa-bullhorn"></i> กิจกรรมโรงเรียน</a>
