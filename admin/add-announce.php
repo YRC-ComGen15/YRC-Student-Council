@@ -27,7 +27,7 @@ if (isset($_POST["title"])) {
         if ($typefile == '.jpg' || $typefile  == '.jpeg' || $typefile  == '.png') {
 
             //โฟลเดอร์ที่เก็บไฟล์
-            $path = "upload/";
+            $path = "../img/post/";
             //ตั้งชื่อไฟล์ใหม่เป็น สุ่มตัวเลข+วันที่
             $newname = $numrand . $date1 . $typefile;
             $path_copy = $path . $newname;
@@ -40,7 +40,7 @@ if (isset($_POST["title"])) {
             $date = $_POST['date'];
 
             //sql insert
-            $stmt = $conn->prepare("INSERT INTO announce (title decp, img, date)
+            $stmt = $pdo->prepare("INSERT INTO announce (title decp, img, date)
     VALUES (:title, :decp, '$newname', :date)");
             $stmt->bindParam(':title', $title, PDO::PARAM_STR);
             $stmt->bindParam(':decp', $decp, PDO::PARAM_STR);
@@ -129,7 +129,7 @@ if (isset($_POST["title"])) {
                 <input type="text" class="form-control w-100" placeholder="หัวข้อข่าว" name="title">
 
                 <h3 class="mt-3">รายละเอียดข่าวประชาสัมพันธ์</h3>
-                <textarea name="" class="form-control w-100" placeholder="รายละเอียดข่าวประชาสัมพันธ์" id=""></textarea>ฃ
+                <textarea name="decp" class="form-control w-100" placeholder="รายละเอียดข่าวประชาสัมพันธ์" id=""></textarea>ฃ
 
                 <h3 class="mt-3">รูปข่าวประชาสัมพันธ์</h3>
                 <input type="file" class="form-control w-100" placeholder="หัวข้อข่าว" name="img_file">
