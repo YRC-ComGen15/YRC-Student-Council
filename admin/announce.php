@@ -68,7 +68,7 @@ require_once "../config/conn.php";
                                 <td><?php echo $row['img'] ?></td>
                                 <td><?php echo $row['date'] ?></td>
                                 <td class="d-flex">
-                                    <a href="" class="btn btn-primary m-auto"><i class="fa-solid fa-pencil"></i> edit</a>
+                                    <a href="./edit-announce.php?id=<?php echo $row['id'] ?>    " class="btn btn-primary m-auto"><i class="fa-solid fa-pencil"></i> edit</a>
                                     <a href="./process/del-announce.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-trash"></i> delete</a>
                                 </td>
                             </tr>
