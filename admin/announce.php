@@ -69,7 +69,7 @@ require_once "../config/conn.php";
                                 <td><?php echo $row['date'] ?></td>
                                 <td class="d-flex">
                                     <a href="" class="btn btn-primary m-auto"><i class="fa-solid fa-pencil"></i> edit</a>
-                                    <a href="" class="btn btn-danger m-auto"><i class="fa-solid fa-trash"></i> delete</a>
+                                    <a href="./process/del-announce.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-trash"></i> delete</a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -92,6 +92,7 @@ require_once "../config/conn.php";
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../Framework/jq/jq.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
     <script>
         $("#table").DataTable({
@@ -101,3 +102,54 @@ require_once "../config/conn.php";
 </body>
 
 </html>
+
+<?php
+
+if (isset($_GET['a'])) {
+    $status = $_GET['a'];
+
+    if ($status == "success") {
+        echo '<script>
+        Swal.fire({
+            title: "บันทึกสำเร็จ",
+            text: "ขอบคุณน่ะที่เพิ่มข่าวให้",
+            icon: "success"
+          });
+        </script>';
+    }
+
+    if ($status == "error") {
+        echo '<script>
+        Swal.fire({
+            title: "บันทึกไม่สำเร็จ",
+            text: "ลองดูใหม่น่ะ อาจจะมีบางอย่างผิดพลาด",
+            icon: "error"
+          });
+        </script>';
+    }
+}
+
+if (isset($_GET['d'])) {
+    $status = $_GET['d'];
+
+    if ($status == "success") {
+        echo '<script>
+        Swal.fire({
+            title: "ลบสำเร็จ",
+            text: "ลบข่าวแล้วน่ะะ",
+            icon: "success"
+          });
+        </script>';
+    }
+
+    if ($status == "error") {
+        echo '<script>
+        Swal.fire({
+            title: "ลบไม่สำเร็จ",
+            text: "อาว..",
+            icon: "error"
+          });
+        </script>';
+    }
+}
+?>

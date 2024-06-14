@@ -1,0 +1,15 @@
+.top-menu {
+   background-color: #FF1493;
+   /* border: 2px solid white; */
+   border-top-right-radius: 20px;
+   border-top-left-radius: 20px;
+}
+
+.border-menu {
+    border:2px solid rgb(198, 198, 198);
+    border-radius: 20px;
+}
+
+.text-pink {
+    color: #FF1493;
+}

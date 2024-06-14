@@ -1,5 +1,49 @@
-<?php ob_start();
-
+<?php
+ob_start();
 require_once "../../config/conn.php";
 
-?>
+// Create variables for the date and random number
+$date1 = date("Ymd_His");
+$numrand = mt_rand();
+$img_file = isset($_POST['img_file']) ? $_POST['img_file'] : '';
+$upload = $_FILES['img_file']['name'];
+
+// File upload handling
+if ($upload != '') {
+    $typefile = strrchr($_FILES['img_file']['name'], ".");
+
+    // Check file extensions
+    if ($typefile == '.jpg' || $typefile == '.jpeg' || $typefile == '.png') {
+        $path = "../../img/post/";
+        $newname = $numrand . $date1 . $typefile;
+        $path_copy = $path . $newname;
+
+        // Ensure the directory exists
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        move_uploaded_file($_FILES['img_file']['tmp_name'], $path_copy);
+
+        // Variables from form
+        $title = $_POST['title'];
+        $decp = $_POST['decp'];
+        $date = $_POST['date'];
+
+        // SQL insert
+        $stmt = $pdo->prepare("INSERT INTO announce (title, decp, img, date) VALUES (:title, :decp, :img, :date)");
+        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+        $stmt->bindParam(':decp', $decp, PDO::PARAM_STR);
+        $stmt->bindParam(':img', $newname, PDO::PARAM_STR);
+        $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+        $result = $stmt->execute();
+
+        if ($result) {
+            header("Location: ../announce.php?a=success");
+        } else {
+            header("Location: ../announce.php?a=error");
+        }
+    } else {
+        header("Location: ../announce.php?a=error");
+    }
+}

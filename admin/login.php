@@ -11,6 +11,9 @@
 
     <!-- adminLTE -->
     <link rel="stylesheet" href="../Framework/adminlte/dist/css/adminlte.min.css">
+
+    <!-- login -->
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>

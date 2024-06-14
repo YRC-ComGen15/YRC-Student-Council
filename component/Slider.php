@@ -11,7 +11,9 @@
             ?>
             <ul class="image-list">
                 <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <img class="image-item" src="./img/post/<?php echo $row['img'] ?>" alt="img-<?php echo $row['id'] ?>" />
+                    <a href="./post.php?id=<?php echo $row['id'] ?>">
+                        <img class="image-item" src="./img/post/<?php echo $row['img'] ?>" alt="img-<?php echo $row['id'] ?>" />
+                    </a>
                 <?php } ?>
             </ul>
             <button id="next-slide" class="slide-button material-symbols-rounded">

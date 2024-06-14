@@ -10,10 +10,10 @@
         </div>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="" class="nav-link"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+                <a href="./index.php" class="nav-link"><i class="fa-solid fa-house"></i> หน้าแรก</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link"><i class="fa-solid fa-chart-simple"></i> ข้อมูลทางสถิติ</a>
+                <a href="./index.php" class="nav-link"><i class="fa-solid fa-chart-simple"></i> ข้อมูลทางสถิติ</a>
             </li>
             <li class="nav-item">
                 <a href="./announce.php" class="nav-link"><i class="fa-solid fa-bullhorn"></i> ประชาสัมพันธ์</a>
@@ -40,6 +40,7 @@
             <hr class="text-dark">
             <li class="nav-item">
                 <a href="./setting.php" class="nav-link"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
+                <a href="./setting.php" class="nav-link"><i class="fa-solid fa-toggle-on"></i> ปุ่มเมนู</a>
             </li>
             <hr class="text-dark">
             <li class="nav-item">
