@@ -196,27 +196,87 @@ require_once("./config/conn.php");
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="#">
-                        <img src="./img/banner/project1.png" class="d-block w-100" alt="...">
+                        <?php
+
+                        $id = 1;
+
+                        $sql = 'SELECT * FROM banner WHERE id = :id';
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute(['id' => $id]);
+
+                        // สำหรับการดึงข้อมูลแถวเดียว
+                        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                        ?>
+                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="./img/banner/project2.png" class="d-block w-100" alt="...">
+                        <?php
+
+                        $id = 2;
+
+                        $sql = 'SELECT * FROM banner WHERE id = :id';
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute(['id' => $id]);
+
+                        // สำหรับการดึงข้อมูลแถวเดียว
+                        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                        ?>
+                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="./img/banner/project3.png" class="d-block w-100" alt="...">
+                        <?php
+
+                        $id = 3;
+
+                        $sql = 'SELECT * FROM banner WHERE id = :id';
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute(['id' => $id]);
+
+                        // สำหรับการดึงข้อมูลแถวเดียว
+                        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                        ?>
+                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="./img/banner/project4.png" class="d-block w-100" alt="...">
+                        <?php
+
+                        $id = 4;
+
+                        $sql = 'SELECT * FROM banner WHERE id = :id';
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute(['id' => $id]);
+
+                        // สำหรับการดึงข้อมูลแถวเดียว
+                        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                        ?>
+                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="./img/banner/project5.png" class="d-block w-100" alt="...">
+                        <?php
+
+                        $id = 5;
+
+                        $sql = 'SELECT * FROM banner WHERE id = :id';
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute(['id' => $id]);
+
+                        // สำหรับการดึงข้อมูลแถวเดียว
+                        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                        ?>
+                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
                     </a>
                 </div>
             </div>
@@ -241,7 +301,7 @@ require_once("./config/conn.php");
             <h1 class="text-center">ประชาสัมพันธ์</h1>
 
             <?php include_once(".//component/Slider.php"); ?>
-            
+
         </div>
 
     </main>

@@ -36,10 +36,10 @@ if (!isset($_SESSION['username'])) {
 
     <main>
         <div class="container mt-5">
-            <h1>Banner โครงการ LearnTogether</h1>
+            <h1>Banner โครงการ We Health Care</h1>
             <?php
 
-            $id = 1;
+            $id = 2;
 
             require_once "../../config/conn.php";
 
