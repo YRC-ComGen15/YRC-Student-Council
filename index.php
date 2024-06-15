@@ -79,14 +79,21 @@ require_once("./config/conn.php");
         <div class="p-5">
             <div class="row ">
                 <!-- 1 -->
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-users"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">สภานักเรียน</h4>
-                </div>
+                <?php
+                $sql = "SELECT * FROM menu";
+                $stmt = $pdo->query($sql);
+                ?>
+                <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <div class=" col-6 col-lg-3 mt-3">
 
-                <div class=" col-6 col-lg-3 mt-3 ">
+                        <a href="<?php echo $row['link'] ?>" class="round m-auto d-flex">
+                            <p href="" class="m-auto text-round"><?php echo $row['icon'] ?></p>
+                        </a>
+                        <h4 class="text-center mt-2"><?php echo $row['title'] ?></h4>
+                    </div>
+                <?php } ?>
+
+                <!-- <div class=" col-6 col-lg-3 mt-3 ">
                     <a href="" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-book"></i></p>
                     </a>
@@ -133,7 +140,7 @@ require_once("./config/conn.php");
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-comments"></i></p>
                     </a>
                     <h4 class="text-center mt-2">Comment</h4>
-                </div>
+                </div> -->
             </div>
         </div>
 

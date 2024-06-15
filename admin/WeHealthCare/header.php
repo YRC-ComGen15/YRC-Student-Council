@@ -23,19 +23,19 @@
             </li>
             <hr class="text-dark">
             <li class="nav-item">
-                <a href="../" class="nav-link"> YRC We HealthCare</a>
+                <a href="../WeHealthCare/index.php" class="nav-link"> YRC We HealthCare</a>
             </li>
             <li class="nav-item">
                 <a href="../LearnTogether/index.php" class="nav-link"> YRC WE LEARNTOGET(HER)</a>
             </li>
             <li class="nav-item">
-                <a href="../" class="nav-link"> YRC Fun Festival SS.3</a>
+                <a href="../FunFestival/index.php" class="nav-link"> YRC Fun Festival SS.3</a>
             </li>
             <li class="nav-item">
-                <a href="../" class="nav-link"> YRC WE SUP(PORT) SOCIAL</a>
+                <a href="../WeSupportSocial/index.php" class="nav-link"> YRC WE SUP(PORT) SOCIAL</a>
             </li>
             <li class="nav-item">
-                <a href="../" class="nav-link"> YRC Green to Grow</a>
+                <a href="../GreenToGrow/index.php" class="nav-link"> YRC Green to Grow</a>
             </li>
             <hr class="text-dark">
             <li class="nav-item">
@@ -68,21 +68,16 @@
                         <i class="fa-solid fa-chalkboard"></i> โครงการ
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">YRC We HealthCare</a></li>
-                        <li><a class="dropdown-item" href="#">YRC WE LEARNTOGET(HER)</a></li>
-                        <li><a class="dropdown-item" href="#">YRC Fun Festival SS.3</a></li>
-                        <li><a class="dropdown-item" href="#">YRC WE SUP(PORT) SOCIAL</a></li>
-                        <li><a class="dropdown-item" href="#">YRC Green to Grow</a></li>
+                        <li><a class="dropdown-item" href="../WeHealthCare/index.php">YRC We HealthCare</a></li>
+                        <li><a class="dropdown-item" href="../LearnTogether/index.php">YRC WE LEARNTOGET(HER)</a></li>
+                        <li><a class="dropdown-item" href="../FunFestival/index.php">YRC Fun Festival SS.3</a></li>
+                        <li><a class="dropdown-item" href="../WeSupportSocial/index.php">YRC WE SUP(PORT) SOCIAL</a></li>
+                        <li><a class="dropdown-item" href="../GreenToGrow/index.php">YRC Green to Grow</a></li>
                     </ul>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li> -->
+                
             </ul>
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
+            
         </div>
     </div>
 </nav>

@@ -29,18 +29,18 @@
                 <a href="./LearnTogether/index.php" class="nav-link"> YRC WE LEARNTOGET(HER)</a>
             </li>
             <li class="nav-item">
-                <a href="./" class="nav-link"> YRC Fun Festival SS.3</a>
+                <a href="./FunFestival/index.php" class="nav-link"> YRC Fun Festival SS.3</a>
             </li>
             <li class="nav-item">
-                <a href="./" class="nav-link"> YRC WE SUP(PORT) SOCIAL</a>
+                <a href="./WeSupportSocial/index.php" class="nav-link"> YRC WE SUP(PORT) SOCIAL</a>
             </li>
             <li class="nav-item">
-                <a href="./" class="nav-link"> YRC Green to Grow</a>
+                <a href="./GreenToGrow/index.php" class="nav-link"> YRC Green to Grow</a>
             </li>
             <hr class="text-dark">
             <li class="nav-item">
                 <a href="./setting.php" class="nav-link"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
-                <a href="./setting.php" class="nav-link"><i class="fa-solid fa-toggle-on"></i> ปุ่มเมนู</a>
+                <a href="./menu.php" class="nav-link"><i class="fa-solid fa-toggle-on"></i> ปุ่มเมนู</a>
             </li>
             <hr class="text-dark">
             <li class="nav-item">
