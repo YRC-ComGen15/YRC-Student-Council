@@ -28,14 +28,15 @@ if ($upload != '') {
         // Variables from form
         $title = $_POST['title'];
         $decp = $_POST['decp'];
-        $date = $_POST['date'];
+        $date = date("d-m-Y");
 
         // SQL insert
-        $stmt = $pdo->prepare("INSERT INTO announce (title, decp, img, date) VALUES (:title, :decp, :img, :date)");
+        $stmt = $pdo->prepare("INSERT INTO announce (title, decp, img, date, edited) VALUES (:title, :decp, :img, :date, :edited)");
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':decp', $decp, PDO::PARAM_STR);
         $stmt->bindParam(':img', $newname, PDO::PARAM_STR);
         $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+        $stmt->bindParam(':edited', $date, PDO::PARAM_STR);
         $result = $stmt->execute();
 
         if ($result) {

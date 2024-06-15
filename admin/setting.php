@@ -85,18 +85,49 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                         $stmt = $pdo->query($sql);
                         ?>
 
-                        <h3 class="mt-3">Banner สภานักเรียน2 <a href="" class="btn btn-success">+</a></h3>
+                        <h3 class="mt-3">Banner สภานักเรียน2 <a href="./add-banner.php" class="btn btn-success">+</a></h3>
 
-                        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                            <div class="d-block box mt-3">
-                                <a href="" class="m-auto">
-                                    <img src="../img/banner/<?php echo isset($banner2['content']) ? htmlspecialchars($banner2['content']) : ''; ?>" class="w-100" alt="">
-                                </a>
-                                <div class="box-input">
-                                    <input type="file" class="form-control" name="banner2" accept="image/png, image/gif, image/jpeg">
-                                </div>
-                            </div>
-                        <?php } ?>
+                        <div class="table-responsive mt-4">
+                            <table id="table" class="table table-row-bordered gy-5">
+                                <thead>
+                                    <tr class="fw-semibold fs-6 text-muted">
+                                        <th>id</th>
+                                        <th>img</th>
+
+                                        <th>option</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $sql = "SELECT * FROM banner3 ORDER BY id DESC";
+                                    $stmt = $pdo->query($sql);
+                                    ?>
+                                    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                                        <tr>
+                                            <td><?php echo $row['id'] ?></td>
+                                            <td>
+                                                <img src="../img/banner/<?php echo $row['img'] ?>" class="w-100" alt="">
+                                            </td>
+
+                                            <td class="d-flex">
+                                                <a href="./edit-banner.php?id=<?php echo $row['id'] ?>    " class="btn btn-primary m-auto"><i class="fa-solid fa-pencil"></i> edit</a>
+                                                <a href="./process/del-banner.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-trash"></i> delete</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>img</th>
+
+                                        <th>option</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
 
                         <input type="submit" class="btn btn-primary w-100 mt-3" value="บันทึก">
                     </form>
@@ -113,3 +144,80 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
 </body>
 
 </html>
+
+<?php
+
+if (isset($_GET['b'])) {
+    $status = $_GET['b'];
+
+    if ($status == "success") {
+        echo '<script>
+        Swal.fire({
+            title: "บันทึกสำเร็จ",
+            text: "ขอบคุณน่ะที่เพิ่มแบนเนอร์ให้",
+            icon: "success"
+          });
+        </script>';
+    }
+
+    if ($status == "error") {
+        echo '<script>
+        Swal.fire({
+            title: "บันทึกไม่สำเร็จ",
+            text: "ลองดูใหม่น่ะ อาจจะมีบางอย่างผิดพลาด",
+            icon: "error"
+          });
+        </script>';
+    }
+}
+
+if (isset($_GET['a'])) {
+    $status = $_GET['a'];
+
+    if ($status == "success") {
+        echo '<script>
+        Swal.fire({
+            title: "บันทึกสำเร็จ",
+            text: "ขอบคุณน่ะที่เพิ่มแบนเนอร์ให้",
+            icon: "success"
+          });
+        </script>';
+    }
+
+    if ($status == "error") {
+        echo '<script>
+        Swal.fire({
+            title: "บันทึกไม่สำเร็จ",
+            text: "ลองดูใหม่น่ะ อาจจะมีบางอย่างผิดพลาด",
+            icon: "error"
+          });
+        </script>';
+    }
+}
+
+
+if (isset($_GET['d'])) {
+    $status = $_GET['d'];
+
+    if ($status == "success") {
+        echo '<script>
+        Swal.fire({
+            title: "ลบแล้วน่ะ",
+            text: "จุบๆ",
+            icon: "success"
+          });
+        </script>';
+    }
+
+    if ($status == "error") {
+        echo '<script>
+        Swal.fire({
+            title: "ลบไม่ได้น่ะ",
+            text: "ลองดูใหม่น่ะ อาจจะมีบางอย่างผิดพลาด",
+            icon: "error"
+          });   
+        </script>';
+    }
+}
+
+?>

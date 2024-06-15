@@ -30,11 +30,11 @@ if ($upload != '') {
     $decp = $_POST['decp'];
 
     // SQL update
-    $stmt = $pdo->prepare("UPDATE announce SET title = :title, decp = :decp, img = :img, date = :date WHERE id = :id");
+    $stmt = $pdo->prepare("UPDATE announce SET title = :title, decp = :decp, img = :img, edited = :edited WHERE id = :id");
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $stmt->bindParam(':decp', $decp, PDO::PARAM_STR);
     $stmt->bindParam(':img', $newname, PDO::PARAM_STR);
-    $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+    $stmt->bindParam(':edited', $date, PDO::PARAM_STR);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $result = $stmt->execute();
 
@@ -49,10 +49,10 @@ if ($upload != '') {
     $decp = $_POST['decp'];
 
     // SQL update
-    $stmt = $pdo->prepare("UPDATE announce SET title = :title, decp = :decp, date = :date WHERE id = :id");
+    $stmt = $pdo->prepare("UPDATE announce SET title = :title, decp = :decp, edited = :edited WHERE id = :id");
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $stmt->bindParam(':decp', $decp, PDO::PARAM_STR);
-    $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+    $stmt->bindParam(':edited', $date, PDO::PARAM_STR);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $result = $stmt->execute();
 
