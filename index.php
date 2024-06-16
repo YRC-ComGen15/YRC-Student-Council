@@ -144,41 +144,30 @@ require_once("./config/conn.php");
             </div>
         </div>
 
+        <?php
+
+        // คำสั่ง SQL เพื่อดึงข้อมูลรูปภาพ
+        $stmt = $pdo->prepare("SELECT img,link FROM banner3");
+        $stmt->execute();
+
+        // ผลลัพธ์จากการ query
+        $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
         <!-- banner สภานักเรียนแบบเลื่อนได้ -->
-        <div id="sca" class="carousel slide">
+        <div id="sca" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#sca" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#sca" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#sca" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#sca" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#sca" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <?php foreach ($images as $key => $image) : ?>
+                    <button type="button" data-bs-target="#sca" data-bs-slide-to="<?= $key ?>" <?= $key === 0 ? 'class="active" aria-current="true"' : '' ?> aria-label="Slide <?= $key + 1 ?>"></button>
+                <?php endforeach; ?>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="#">
-                        <img src="./img/banner/project1.png" class="d-block w-100" alt="...">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#">
-                        <img src="./img/banner/project2.png" class="d-block w-100" alt="...">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#">
-                        <img src="./img/banner/project3.png" class="d-block w-100" alt="...">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#">
-                        <img src="./img/banner/project4.png" class="d-block w-100" alt="...">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#">
-                        <img src="./img/banner/project5.png" class="d-block w-100" alt="...">
-                    </a>
-                </div>
+                <?php foreach ($images as $key => $image) : ?>
+                    <div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
+                        <a href="<?= $image['link'] ?>">
+                            <img src="./img/banner/<?= $image['img'] ?>" class="d-block w-100" alt="...">
+                        </a>
+                    </div>
+                <?php endforeach; ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#sca" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -192,7 +181,7 @@ require_once("./config/conn.php");
 
         <!-- banner โครงการ -->
 
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>

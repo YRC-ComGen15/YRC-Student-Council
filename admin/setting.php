@@ -93,6 +93,7 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                                     <tr class="fw-semibold fs-6 text-muted">
                                         <th>id</th>
                                         <th>img</th>
+                                        <th>link</th>
 
                                         <th>option</th>
                                     </tr>
@@ -106,9 +107,10 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                                         <tr>
                                             <td><?php echo $row['id'] ?></td>
                                             <td>
-                                                <img src="../img/banner/<?php echo $row['img'] ?>" class="w-100" alt="">
+                                                <img src="../img/banner/<?php echo $row['img'] ?>" class="w-50" alt="">
                                             </td>
 
+                                            <td><?php echo $row['link'] ?></td>
                                             <td class="d-flex">
                                                 <a href="./edit-banner.php?id=<?php echo $row['id'] ?>    " class="btn btn-primary m-auto"><i class="fa-solid fa-pencil"></i> edit</a>
                                                 <a href="./process/del-banner.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-trash"></i> delete</a>
@@ -121,6 +123,7 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                                     <tr>
                                         <th>id</th>
                                         <th>img</th>
+                                        <th>link</th>
 
                                         <th>option</th>
                                     </tr>
@@ -140,6 +143,7 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
