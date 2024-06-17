@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2024 at 12:10 PM
+-- Generation Time: Jun 17, 2024 at 03:09 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -80,11 +80,11 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`id`, `project`, `files`) VALUES
-(1, 'LearnTogether', '119614834920240614_101807.png'),
-(2, 'We Health Care', 'project2.png'),
-(3, 'FunFestival', 'project3.png'),
-(4, 'WE SUPPORT SOCIAL', 'project4.png'),
-(5, 'Green to Grow', 'project5.png');
+(1, 'LearnTogether', '8778359820240616_092452.JPG'),
+(2, 'We Health Care', '138317875320240616_085743.jpg'),
+(3, 'FunFestival', '45630422920240616_085455.png'),
+(4, 'WE SUPPORT SOCIAL', '168299123220240616_085839.png'),
+(5, 'Green to Grow', '57714871720240616_085753.PNG');
 
 -- --------------------------------------------------------
 
@@ -94,16 +94,17 @@ INSERT INTO `banner` (`id`, `project`, `files`) VALUES
 
 CREATE TABLE `banner3` (
   `id` int(11) NOT NULL,
-  `img` varchar(255) NOT NULL
+  `img` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `banner3`
 --
 
-INSERT INTO `banner3` (`id`, `img`) VALUES
-(2, '162441859620240615_091141.JPG'),
-(4, '74781500320240615_091101.JPG');
+INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
+(2, '162441859620240615_091141.JPG', '#'),
+(4, '4044132520240616_083539.JPG', 'https://google.com');
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,7 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
-(1, 'https://google.com', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
+(1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
 (2, 'https://google.com', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
 (3, 'https://google.com', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
 (4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
@@ -151,6 +152,26 @@ CREATE TABLE `setting` (
 INSERT INTO `setting` (`id`, `title`, `content`) VALUES
 (1, 'banner', 'Banner1.png'),
 (2, 'banner2', 'Banner2.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studentcouncil`
+--
+
+CREATE TABLE `studentcouncil` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `edited` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `studentcouncil`
+--
+
+INSERT INTO `studentcouncil` (`id`, `title`, `edited`, `img`) VALUES
+(1, 'โครงสร้างการบริหารกิจกรรมสภานักเรียนโรงเรียนยุพราชวิทยาลัย', '16-6-2024', '87182019520240616_092540.JPG');
 
 -- --------------------------------------------------------
 
@@ -204,6 +225,12 @@ ALTER TABLE `setting`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `studentcouncil`
+--
+ALTER TABLE `studentcouncil`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `viewer`
 --
 ALTER TABLE `viewer`
@@ -248,6 +275,12 @@ ALTER TABLE `menu`
 --
 ALTER TABLE `setting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `studentcouncil`
+--
+ALTER TABLE `studentcouncil`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `viewer`
