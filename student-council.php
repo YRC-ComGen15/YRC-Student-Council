@@ -1,9 +1,6 @@
 <?php
 
 ob_start();
-$id = $_GET['id'];
-
-echo $id;
 
 require_once "./config/conn.php";
 

@@ -7,17 +7,36 @@
     --color-primary: #FF1493;
 }
 
+html,
 body {
+    height: 100%;
+    margin: 0;
+    /* Remove default margin */
     font-family: ibm;
+}
+
+body {
     background-image: url(./Imge/paper-2631126.jpg);
 
     /* Full height */
-    height: 100%;
+    min-height: 100%;
+    /* Ensures the body is at least 100% of viewport height */
 
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* Scale the image to cover the entire background */
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-primary);
 }
 
 .mt-6 {
@@ -30,6 +49,7 @@ body {
     padding-right: 20%;
     padding-top: 1%;
     padding-bottom: 1%;
+    /* เพิ่ม padding-bottom เพื่อให้สัดส่วนสมดุล */
     background-color: white;
     border: 4px solid #FFF18D;
     border-radius: 30px;
@@ -39,4 +59,22 @@ body {
     -o-border-radius: 30px;
     color: var(--color-primary);
     text-decoration: none;
+}
+
+.buttonn {
+    box-shadow: 0px 0px 1px black;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    /* เพิ่ม padding-bottom เพื่อให้สัดส่วนสมดุล */
+    background-color: white;
+    border: 4px solid var(--color-primary);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    color: #FFF18D;
 }
