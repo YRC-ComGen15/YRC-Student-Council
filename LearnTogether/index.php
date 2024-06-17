@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Together</title>
 
-<link rel="shortcut icon" href="../img/learntogether logo.pnggi" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/learntogether logo.pnggi" type="image/x-icon">
 
     <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
 
