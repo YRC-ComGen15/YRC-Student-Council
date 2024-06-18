@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+/* Variables */
+$darktan: #9a8548;
+$grad2: #373737;
+$grad1: darken($grad2, 2);
+$grad3: lighten($darktan, 4);
+$grad5: darken($darktan, 4);
+
+/* For presentation's sake */
+body {
+    background: lightgray;
+}
+
+.bookshelf--frame {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: tan;
+    /* Fallback background color */
+    background-image: url("https://static.tumblr.com/8x9m588/C8ho55ylx/bg-wood2.png"), linear-gradient($grad1,
+            $grad2 290px,
+            $grad3 290px,
+            $grad3 292px,
+            $darktan 292px,
+            $darktan 298px,
+            $grad5 298px,
+            $grad5 300px);
+    /* Multiple backgrounds with fallback */
+    background-size: auto, 10px 300px;
+    border-left: 10px solid $darktan;
+    /* Use the variable $darktan if using Sass */
+    border-right: 10px solid $darktan;
+    /* Use the variable $darktan if using Sass */
+    text-align: center;
+}
+
+/* Fallback for browsers that do not support multiple backgrounds */
+@media (min-width: 1200px) {
+    .bookshelf--frame {
+        background-image: url("https://static.tumblr.com/8x9m588/C8ho55ylx/bg-wood2.png");
+    }
+}
+
+.bookshelf--frame:first-of-type {
+    border-top: 10px solid $darktan;
+}
+
+.bookshelf--frame .book-wrapper {
+    display: inline-block;
+    width: 290px;
+    vertical-align: bottom;
+    height: 280px;
+    position: relative;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+.bookshelf--frame .book-wrapper img {
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 100%;
+    max-width: 100%;
+}
