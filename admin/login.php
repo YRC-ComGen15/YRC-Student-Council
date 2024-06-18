@@ -10,10 +10,16 @@
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
 
     <!-- adminLTE -->
-    <link rel="stylesheet" href="../Framework/adminlte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../asset/css/index.css">
 
     <!-- login -->
     <link rel="stylesheet" href="./css/login.css">
+
+    <!-- alert -->
+    <link rel="stylesheet" href="../Framework/sweetalert/sweetalert2.css">
 </head>
 
 <body>
@@ -37,7 +43,26 @@
     </main>
 
     <!-- adminLTE -->
-    <script src="../Framework/adminlte/dist/js/adminlte.min.js"></script>
+    <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- sweetalert -->
+    <script src="../Framework/sweetalert/sweetalert2.all.js"></script>
 </body>
 
 </html>
+
+<?php
+
+if (isset($_GET['a'])) {
+    $status = $_GET['a'];
+
+    if ($status == 'error') {
+        echo '<script>Swal.fire({
+  title: "Error",
+  text: "ชื่อผู้ใช้หรือรหัสผ่านผิดพลาด",
+  icon: "error"
+});</script>';
+    }
+}
+
+?>

@@ -14,9 +14,7 @@ if ($_POST['password'] == $user['password']) {
     $_SESSION['UserID'] = $user['id'];
     $_SESSION['username'] = $user['username'];
     // echo "Login successful! Welcome, " . $_SESSION['username'];
-    header("Location: ../index.php");
+    header("Location: ../index.php?a=success");
 } else {
-    echo "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง ";
-    echo "<a href='../login.php'>กลับไปหน้าล็อกอิน</a>";
-    echo "อาจจะไม่สวยนะงับงานเร่ง😭😭";
+    header("Location: ../login.php?a=error");
 }

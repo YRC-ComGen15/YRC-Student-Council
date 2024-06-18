@@ -75,7 +75,7 @@ if (!isset($_SESSION['username'])) {
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['อาทิตย์','จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+                labels: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
                 datasets: [{
                     label: 'จำนวนการเข้าชม',
                     data: [12, 19, 3, 5, 2, 3, 5],
@@ -91,6 +91,24 @@ if (!isset($_SESSION['username'])) {
             }
         });
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
+
+<?php
+
+if (isset($_GET['a'])) {
+    $status = $_GET['a'];
+
+    if ($status == 'success') {
+        echo '<script>Swal.fire({
+  title: "Success",
+  text: "ล็อกอินสำเร็จ",
+  icon: "success"
+});</script>';
+    }
+}
+
+?>
