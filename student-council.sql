@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2024 at 02:07 AM
+-- Generation Time: Jun 18, 2024 at 06:50 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -105,6 +105,40 @@ CREATE TABLE `banner3` (
 INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
 (2, '162441859620240615_091141.JPG', '#'),
 (4, '4044132520240616_083539.JPG', 'https://google.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `learn_booksharing`
+--
+
+CREATE TABLE `learn_booksharing` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `decp` mediumtext NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `learn_category`
+--
+
+CREATE TABLE `learn_category` (
+  `id` int(11) NOT NULL,
+  `category` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `learn_category`
+--
+
+INSERT INTO `learn_category` (`id`, `category`) VALUES
+(1, 'หมวดหมู่ 1');
 
 -- --------------------------------------------------------
 
@@ -213,6 +247,18 @@ ALTER TABLE `banner3`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `learn_booksharing`
+--
+ALTER TABLE `learn_booksharing`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `learn_category`
+--
+ALTER TABLE `learn_category`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
@@ -263,6 +309,18 @@ ALTER TABLE `banner`
 --
 ALTER TABLE `banner3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `learn_booksharing`
+--
+ALTER TABLE `learn_booksharing`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `learn_category`
+--
+ALTER TABLE `learn_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `menu`
