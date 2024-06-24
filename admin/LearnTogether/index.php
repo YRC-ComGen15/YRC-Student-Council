@@ -74,21 +74,15 @@ if (!isset($_SESSION['username'])) {
                             <tr class="fw-semibold fs-6 text-muted">
                                 <th>id</th>
                                 <th>category</th>
-<<<<<<< HEAD
 
-=======
-                                
->>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
                                 <th>option</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-<<<<<<< HEAD
                             $sql = "SELECT * FROM learn_category ORDER BY id DESC";
-=======
+
                             $sql = "SELECT * FROM learn_category";
->>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
                             $stmt = $pdo->query($sql);
                             ?>
                             <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
@@ -113,81 +107,79 @@ if (!isset($_SESSION['username'])) {
                     </table>
                 </div>
             </div>
-<<<<<<< HEAD
+            <<<<<<< HEAD <!-- bookshelf -->
+                <div class="mt-5 container">
+                    <h1><b><i class="fa-solid fa-bullhorn"></i> รายการหนังสือทั้งหมด</b></h1>
+                    <a href="./add-catagory.php" class="btn btn-outline-success mt-3">เพิ่มหมวดหมู่หนังสือ +</a>
 
-            <!-- bookshelf -->
-            <div class="mt-5 container">
-                <h1><b><i class="fa-solid fa-bullhorn"></i> รายการหนังสือทั้งหมด</b></h1>
-                <a href="./add-catagory.php" class="btn btn-outline-success mt-3">เพิ่มหมวดหมู่หนังสือ +</a>
+                    <div class="table-responsive mt-4">
+                        <table id="table" class="table table-row-bordered gy-5">
+                            <thead>
+                                <tr class="fw-semibold fs-6 text-muted">
+                                    <th>id</th>
+                                    <th>title</th>
+                                    <th>category</th>
 
-                <div class="table-responsive mt-4">
-                    <table id="table" class="table table-row-bordered gy-5">
-                        <thead>
-                            <tr class="fw-semibold fs-6 text-muted">
-                                <th>id</th>
-                                <th>title</th>
-                                <th>category</th>
-
-                                <th>img</th>
-                                <th>date</th>
-                                <th>name</th>
-                                <th>status</th>
-                                <th>option</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $sql = "SELECT * FROM learn_booksharing ORDER BY id DESC";
-                            $stmt = $pdo->query($sql);
-                            ?>
-                            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                                <tr>
-                                    <td><?php echo $row['id'] ?></td>
-                                    <td><?php echo $row['title'] ?></td>
-                                    <td><?php echo $row['category'] ?></td>
-
-                                    <td>
-                                        <img src="../../LearnTogether/BookCover/<?php echo $row['img'] ?>" class="w-100" alt="">
-                                    </td>
-                                    <td><?php echo $row['date'] ?></td>
-                                    <td><?php echo $row['name'] ?></td>
-
-                                    <?php
-
-                                    if ($row['status'] == "active") {
-                                        echo "<td class='text-success'>ยืนยันแล้ว</td>";
-                                    } else {
-                                        echo "<td class='text-danger'>ยังไม่ได้ยืนยัน</td>";
-                                    }
-
-                                    ?>
-
-                                    <td class="d-flex">
-                                        <a href="./process/submit-book.php?id=<?php echo $row['id'] ?>" class="btn btn-success m-auto"><i class="fa-solid fa-check"></i> ยืนยัน</a>
-                                        <a href="./process/del-book.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-xmark"></i> ปฎิเสธ</a>
-                                    </td>
+                                    <th>img</th>
+                                    <th>date</th>
+                                    <th>name</th>
+                                    <th>status</th>
+                                    <th>option</th>
                                 </tr>
-                            <?php } ?>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $sql = "SELECT * FROM learn_booksharing ORDER BY id DESC";
+                                $stmt = $pdo->query($sql);
+                                ?>
+                                <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                                    <tr>
+                                        <td><?php echo $row['id'] ?></td>
+                                        <td><?php echo $row['title'] ?></td>
+                                        <td><?php echo $row['category'] ?></td>
 
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>id</th>
-                                <th>title</th>
-                                <th>category</th>
+                                        <td>
+                                            <img src="../../LearnTogether/BookCover/<?php echo $row['img'] ?>" class="w-100" alt="">
+                                        </td>
+                                        <td><?php echo $row['date'] ?></td>
+                                        <td><?php echo $row['name'] ?></td>
 
-                                <th>img</th>
-                                <th>date</th>
-                                <th>name</th>
-                                <th>status</th>
-                                <th>option</th>
-                            </tr>
-                        </tfoot>
-                    </table>
+                                        <?php
+
+                                        if ($row['status'] == "active") {
+                                            echo "<td class='text-success'>ยืนยันแล้ว</td>";
+                                        } else {
+                                            echo "<td class='text-danger'>ยังไม่ได้ยืนยัน</td>";
+                                        }
+
+                                        ?>
+
+                                        <td class="d-flex">
+                                            <a href="./process/submit-book.php?id=<?php echo $row['id'] ?>" class="btn btn-success m-auto"><i class="fa-solid fa-check"></i> ยืนยัน</a>
+                                            <a href="./process/del-book.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-xmark"></i> ปฎิเสธ</a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>id</th>
+                                    <th>title</th>
+                                    <th>category</th>
+
+                                    <th>img</th>
+                                    <th>date</th>
+                                    <th>name</th>
+                                    <th>status</th>
+                                    <th>option</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
-            </div>
-=======
->>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
+                =======
+                >>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
         </div>
 
 
