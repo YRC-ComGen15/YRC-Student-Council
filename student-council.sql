@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Jun 22, 2024 at 11:50 AM
-=======
--- Generation Time: Jun 18, 2024 at 06:50 AM
->>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
+-- Generation Time: Jun 24, 2024 at 04:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -123,8 +119,16 @@ CREATE TABLE `learn_booksharing` (
   `decp` mediumtext NOT NULL,
   `img` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `learn_booksharing`
+--
+
+INSERT INTO `learn_booksharing` (`id`, `title`, `category`, `decp`, `img`, `date`, `name`, `status`) VALUES
+(1, 'ชีวิตเรามีแค่สี่พันสัปดาห์', 'หมวดหมู่ 1', 'เราสำรวจปรัชญาน่าทึ่งเกี่ยวกับเวลาและการบริหารเวลา ที่จะช่วยให้คุณมองเวลาชีวิตที่มีอยู่แค่ราวๆ 4000 พันสัปดาห์เปลี่ยนไปโดยสิ้นเชิง และปลดแอกตัวเองจาก “คำสาปของยุคโมเดิร์น” ที่เรียกร้องให้เรายัดทุกอย่างลงในเวลาที่มีอย่างมีประสิทธิภาพ ทำทุกอย่างให้เสร็จอย่างดี (getting thing done)  หนังสือทำให้เห็นว่า เราถูกตั้งโปรแกรมให้มีความคิดผิดเพี้ยนแค่ไหนเกี่ยวกับเวลา ความจริงด้านเวลาที่จะไม่มีวันเปลี่ยนแปลงคืออะไร พร้อมกับให้เครื่องมือที่ช่วยให้คุณได้สร้างชีวิตที่มีความหมาย ด้วยการยินดีโอบรับขีดจำกัดของชีวิต และเปลี่ยนแปลงสิ่งที่เราทำได้ในฐานะปัจเจก และสังคม', '1000255590_front_XXXL.jpg', '22-06-2024', 'วีราวรรธนุ์ กันธิพันธ์', 'active');
 
 -- --------------------------------------------------------
 
@@ -163,13 +167,13 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
-(2, './?status=coming', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
-(3, './?status=coming', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
-(4, 'https://veerawatt020253.github.io/YUPPARAJ-NAVIGATION/', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
-(5, './?status=coming', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
+(2, 'https://google.com', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
+(3, 'https://google.com', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
+(4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
+(5, 'https://google.com', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
 (6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
-(7, '#canlendar', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
-(8, './?status=coming', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
+(7, 'https://google.com', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
+(8, 'https://google.com', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
 
 -- --------------------------------------------------------
 
@@ -223,15 +227,6 @@ CREATE TABLE `viewer` (
   `info` varchar(255) NOT NULL,
   `day` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `viewer`
---
-
-INSERT INTO `viewer` (`id`, `date`, `info`, `day`) VALUES
-(1, '21-06-2024', 'Device:Desktop OS:window', ''),
-(2, '22-06-2024', 'Device:Desktop OS:window', ''),
-(3, '22-06-2024', 'Device:Desktop OS:window', 'Saturday');
 
 --
 -- Indexes for dumped tables
@@ -329,7 +324,7 @@ ALTER TABLE `banner3`
 -- AUTO_INCREMENT for table `learn_booksharing`
 --
 ALTER TABLE `learn_booksharing`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `learn_category`
@@ -359,7 +354,7 @@ ALTER TABLE `studentcouncil`
 -- AUTO_INCREMENT for table `viewer`
 --
 ALTER TABLE `viewer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

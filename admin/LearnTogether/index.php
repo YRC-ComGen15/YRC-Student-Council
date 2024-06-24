@@ -107,10 +107,9 @@ if (!isset($_SESSION['username'])) {
                     </table>
                 </div>
             </div>
-            <<<<<<< HEAD <!-- bookshelf -->
+            <!-- bookshelf -->
                 <div class="mt-5 container">
                     <h1><b><i class="fa-solid fa-bullhorn"></i> รายการหนังสือทั้งหมด</b></h1>
-                    <a href="./add-catagory.php" class="btn btn-outline-success mt-3">เพิ่มหมวดหมู่หนังสือ +</a>
 
                     <div class="table-responsive mt-4">
                         <table id="table" class="table table-row-bordered gy-5">
@@ -178,8 +177,6 @@ if (!isset($_SESSION['username'])) {
                         </table>
                     </div>
                 </div>
-                =======
-                >>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
         </div>
 
 
