@@ -74,13 +74,21 @@ if (!isset($_SESSION['username'])) {
                             <tr class="fw-semibold fs-6 text-muted">
                                 <th>id</th>
                                 <th>category</th>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
                                 <th>option</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
+<<<<<<< HEAD
                             $sql = "SELECT * FROM learn_category ORDER BY id DESC";
+=======
+                            $sql = "SELECT * FROM learn_category";
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
                             $stmt = $pdo->query($sql);
                             ?>
                             <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
@@ -105,6 +113,7 @@ if (!isset($_SESSION['username'])) {
                     </table>
                 </div>
             </div>
+<<<<<<< HEAD
 
             <!-- bookshelf -->
             <div class="mt-5 container">
@@ -177,6 +186,8 @@ if (!isset($_SESSION['username'])) {
                     </table>
                 </div>
             </div>
+=======
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
         </div>
 
 

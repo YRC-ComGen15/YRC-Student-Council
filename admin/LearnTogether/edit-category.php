@@ -54,7 +54,11 @@ require_once "../../config/conn.php";
             ?>
             <h1><b><i class="fa-solid fa-bullhorn"></i> แก้ไขชื่อหมวดหมู่</b></h1>
 
+<<<<<<< HEAD
             <form action="./process/edit-category.php" name="form" method="post" enctype="multipart/form-data">
+=======
+            <form action="./process/edit-announce.php" name="form" method="post" enctype="multipart/form-data">
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
                 <h3 class="mt-3">id</h3>
                 <input type="text" class="form-control w-100" name="id" readonly value="<?php echo $data['id'] ?>">
 

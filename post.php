@@ -56,7 +56,7 @@ require_once "./config/conn.php";
 
         ?>
         <!-- banner -->
-        <div class="d-block w-100 mt-5">
+        <div class="d-block w-100 mt-3">
             <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
         </div>
     </header>

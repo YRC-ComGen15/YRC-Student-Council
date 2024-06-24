@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 require_once "../config/conn.php";
+=======
+require_once"../config/conn.php";
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
 
 ?>
 
@@ -12,8 +16,11 @@ require_once "../config/conn.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Sharing</title>
 
+<<<<<<< HEAD
     <link rel="shortcut icon" href="../img/learntogether logo.png" type="image/x-icon">
 
+=======
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
     <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="./share.css">
@@ -29,6 +36,7 @@ require_once "../config/conn.php";
             <h4 class="text-white px-3 py-3">ชั้นหนังสือ</h4>
         </div>
 
+<<<<<<< HEAD
         <div class="w-100 d-flex row px-1">
             <form action="./bookshelf.php" class=" mt-3 d-flex col-6" method="get">
 
@@ -82,10 +90,35 @@ require_once "../config/conn.php";
                     </button>
                 </div>
             <?php } ?>
+=======
+        <form action="./bookshelf.php" class="mx-5 mt-3 d-flex" method="get">
+
+            <select name="category" class="form-control w-50" id="category">
+                <option value="0">เลือกประเภทหนังสือ</option>
+                <?php
+                $sql = "SELECT * FROM learn_category";
+                $stmt = $pdo->query($sql);
+                ?>
+                <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <option value="<?php echo $row['id'] ?>"><?php echo $row['category'] ?></option>
+                <?php } ?>
+            </select>
+
+            <input type="submit" class="btn btn-success mx-2" value="ค้นหา">
+        </form>
+
+        <div class="bookshelf--frame mb-5 mt-3">
+            <div class="book-wrapper">
+                <a href="https://google.com">
+                    <img src="https://via.placeholder.com/300x500?text=A%20tall%20book" width="300" height="500" alt="A tall book">
+                </a>
+            </div>
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
 
         </div>
     </div>
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
+<<<<<<< HEAD
     <script src="../Framework/jq/jq.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -141,3 +174,8 @@ if (isset($_GET['a'])) {
 }
 
 ?>
+=======
+</body>
+
+</html>
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da

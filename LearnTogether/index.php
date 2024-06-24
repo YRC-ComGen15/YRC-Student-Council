@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Together</title>
 
+<<<<<<< HEAD
     <link rel="shortcut icon" href="../img/learntogether logo.png" type="image/x-icon">
+=======
+    <link rel="shortcut icon" href="../img/learntogether logo.pnggi" type="image/x-icon">
+>>>>>>> 83fe3ff260bc86b86a1876caf855c95400a5d6da
 
     <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
 
