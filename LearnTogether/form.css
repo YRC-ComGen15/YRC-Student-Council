@@ -1,0 +1,9 @@
+body {
+    background-image: url(./Imge/bg.jpg);
+}
+
+.box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px black;
+}

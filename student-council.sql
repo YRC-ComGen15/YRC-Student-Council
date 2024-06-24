@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2024 at 03:11 AM
+-- Generation Time: Jun 22, 2024 at 11:50 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -125,13 +125,13 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
-(2, 'https://google.com', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
-(3, 'https://google.com', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
-(4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
-(5, 'https://google.com', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
+(2, './?status=coming', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
+(3, './?status=coming', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
+(4, 'https://veerawatt020253.github.io/YUPPARAJ-NAVIGATION/', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
+(5, './?status=coming', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
 (6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
-(7, 'https://google.com', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
-(8, 'https://google.com', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
+(7, '#canlendar', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
+(8, './?status=coming', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
 
 -- --------------------------------------------------------
 
@@ -181,8 +181,19 @@ INSERT INTO `studentcouncil` (`id`, `title`, `edited`, `img`) VALUES
 
 CREATE TABLE `viewer` (
   `id` int(11) NOT NULL,
-  `date` varchar(255) NOT NULL
+  `date` varchar(255) NOT NULL,
+  `info` varchar(255) NOT NULL,
+  `day` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `viewer`
+--
+
+INSERT INTO `viewer` (`id`, `date`, `info`, `day`) VALUES
+(1, '21-06-2024', 'Device:Desktop OS:window', ''),
+(2, '22-06-2024', 'Device:Desktop OS:window', ''),
+(3, '22-06-2024', 'Device:Desktop OS:window', 'Saturday');
 
 --
 -- Indexes for dumped tables
@@ -286,7 +297,7 @@ ALTER TABLE `studentcouncil`
 -- AUTO_INCREMENT for table `viewer`
 --
 ALTER TABLE `viewer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

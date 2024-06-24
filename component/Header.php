@@ -65,11 +65,11 @@
                             <i class="fa-solid fa-chalkboard"></i> โครงการ
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">YRC We HealthCare</a></li>
-                            <li><a class="dropdown-item" href="#">YRC WE LEARNTOGET(HER)</a></li>
-                            <li><a class="dropdown-item" href="#">YRC Fun Festival SS.3</a></li>
-                            <li><a class="dropdown-item" href="#">YRC WE SUP(PORT) SOCIAL</a></li>
-                            <li><a class="dropdown-item" href="#">YRC Green to Grow</a></li>
+                            <li><a class="dropdown-item" href="./?status=coming">YRC We HealthCare</a></li>
+                            <li><a class="dropdown-item" href="./learntogether/">YRC WE LEARNTOGET(HER)</a></li>
+                            <li><a class="dropdown-item" href="./?status=coming">YRC Fun Festival SS.3</a></li>
+                            <li><a class="dropdown-item" href="./?status=coming">YRC WE SUP(PORT) SOCIAL</a></li>
+                            <li><a class="dropdown-item" href="./?status=coming">YRC Green to Grow</a></li>
                         </ul>
                     </div>
                 </li>
@@ -77,7 +77,7 @@
                     <a class="nav-link" href="./all_announce.php"><i class="fa-solid fa-bullhorn"></i> ประชาสัมพันธ์</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./about.php">เกี่ยวกับเรา</a>
+                    <a class="nav-link" href="./student-council.php">เกี่ยวกับเรา</a>
                 </li>
             </ul>
             <form action="./search.php" method="get" class="d-flex my-2 my-lg-0">

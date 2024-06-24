@@ -61,7 +61,7 @@ require_once("./config/conn.php");
             <div class="row ">
                 <!-- 1 -->
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="" class="round m-auto d-flex">
+                    <a href="./project.php?status=coming" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-users"></i></p>
                     </a>
                     <h4 class="text-center mt-2">YRC We healthcare</h4>
@@ -76,34 +76,34 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="" class="round m-auto d-flex">
+                    <a href="./project.php?status=coming" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-people-group"></i></p>
                     </a>
                     <h4 class="text-center mt-2">FUN Festival</h4>
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="" class="round m-auto d-flex">
+                    <a href="./project.php?status=coming" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-map"></i></p>
                     </a>
                     <h4 class="text-center mt-2">YRC WE SUPPORT SOCIAL</h4>
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="" class="round m-auto d-flex">
+                    <a href="./project.php?status=coming" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-school"></i></p>
                     </a>
                     <h4 class="text-center mt-2">YRC green to grow</h4>
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php" class="round m-auto d-flex">
+                    <a href="./project.php?status=coming" class="round m-auto d-flex">
                         <p href="" class="m-auto text-round"><i class="fa-solid fa-chalkboard"></i></p>
                     </a>
                     <h4 class="text-center mt-2">Zero Waste</h4>
                 </div>
 
-                
+
             </div>
         </div>
     </main>
@@ -118,6 +118,20 @@ require_once("./config/conn.php");
     <!-- fontawsome -->
     <script src="./Framework/fontawsome/js/all.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
+<?php
+
+if (isset($_GET['status'])) {
+    if ($_GET['status'] == 'coming') {
+        echo '<script>Swal.fire({
+  title: "Coming Soon !",
+  text: "เว็บกำลังจะเปิดตัวในไม่ช้า",
+  icon: "warning"
+});</script>';
+    }
+}
+
+?>

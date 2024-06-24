@@ -4,6 +4,8 @@ session_start();
 
 require_once("./config/conn.php");
 
+// include_once "./config/countViewer.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,11 +53,13 @@ require_once("./config/conn.php");
         </div>
 
         <div class="d-block bg-pink w-100 text-light py-4 text-center">
-            <h2>สภานักเรียนโรงเรียนยุพราชวิทยาลัย</h2>
-            <h5>YRC Student Council</h5>
+            <img src="./img/logo.png" width="100" height="100" class="mb-2" alt="">
+            <h3 class="w-100"><b class="w-100">"สภานักเรียน เรียนรู้ด้วยปัญญา พัฒนาศักยภาพ เสริมสร้างประชาธิปไตย"</b></h3>
+            <h4>สภานักเรียนโรงเรียนยุพราชวิทยาลัย</h4>
+            <h5>YRC Student Council Association</h5>
         </div>
         <!-- banner -->
-        <div class="d-block w-100">
+        <!-- <div class="d-block w-100">
             <?php
 
             $banner2 = "banner2";
@@ -70,7 +74,7 @@ require_once("./config/conn.php");
 
             ?>
             <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
-        </div>
+        </div> -->
 
     </header>
 
@@ -93,54 +97,6 @@ require_once("./config/conn.php");
                     </div>
                 <?php } ?>
 
-                <!-- <div class=" col-6 col-lg-3 mt-3 ">
-                    <a href="" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-book"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">คู่มือนักเรียน</h4>
-                </div>
-
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-people-group"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">กฏระเบียบ</h4>
-                </div>
-
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-map"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">แผนที่โรงเรียน</h4>
-                </div>
-
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-school"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">กิจกรรมโรงเรียน</h4>
-                </div>
-
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="./project.php" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-chalkboard"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">โครงการ</h4>
-                </div>
-
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="#canlendar" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-calendar-days"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">ปฏิทิน</h4>
-                </div>
-
-                <div class=" col-6 col-lg-3 mt-3">
-                    <a href="" class="round m-auto d-flex">
-                        <p href="" class="m-auto text-round"><i class="fa-solid fa-comments"></i></p>
-                    </a>
-                    <h4 class="text-center mt-2">Comment</h4>
-                </div> -->
             </div>
         </div>
 
@@ -194,7 +150,7 @@ require_once("./config/conn.php");
                     <a href="#">
                         <?php
 
-                        $id = 1;
+                        $id = 2;
 
                         $sql = 'SELECT * FROM banner WHERE id = :id';
                         $stmt = $pdo->prepare($sql);
@@ -211,7 +167,7 @@ require_once("./config/conn.php");
                     <a href="#">
                         <?php
 
-                        $id = 2;
+                        $id = 1;
 
                         $sql = 'SELECT * FROM banner WHERE id = :id';
                         $stmt = $pdo->prepare($sql);
@@ -312,6 +268,22 @@ require_once("./config/conn.php");
     <!-- fontawsome -->
     <script src="./Framework/fontawsome/js/all.js"></script>
 
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>
+<?php
+
+if (isset($_GET['status'])) {
+    if ($_GET['status'] == 'coming') {
+        echo '<script>Swal.fire({
+  title: "Coming Soon !",
+  text: "เว็บกำลังจะเปิดตัวในไม่ช้า",
+  icon: "warning"
+});</script>';
+    }
+}
+
+?>
