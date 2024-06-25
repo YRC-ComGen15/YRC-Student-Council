@@ -25,7 +25,7 @@
     </div>
 
     <div class="d-flex">
-        <a href="" class="m-auto mt-5 button">
+        <a href="./activity.php" class="m-auto mt-5 button">
             <h1>SHARE กิจกรรม</h1>
         </a>
 

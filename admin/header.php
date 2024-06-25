@@ -1,3 +1,18 @@
+<?php
+
+if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
+    $HealthCare = "nav-item";
+    $LearnTogether = "nav-item";
+    $FunFest = "nav-item";
+    $Subso = "nav-item";
+    $Green = "nav-item";
+
+    $admin = "";
+} else {
+    $admin = "d-none";
+}
+
+?>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
 
@@ -8,40 +23,98 @@
         <div class="d-flex">
             <img src="../img/logo.png" class="w-50 m-auto" alt="">
         </div>
+
         <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <b class="nav-link">ฝ่าย : <?php echo $_SESSION['role'] ?></b>
+            </li>
+            <li class="nav-item">
+                <b class="nav-link">โครงการ : <?php echo $_SESSION['project'] ?></b>
+            </li>
+            <hr>
+
             <li class="nav-item">
                 <a href="./index.php" class="nav-link"><i class="fa-solid fa-house"></i> หน้าแรก</a>
             </li>
             <li class="nav-item">
                 <a href="./index.php" class="nav-link"><i class="fa-solid fa-chart-simple"></i> ข้อมูลทางสถิติ</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?= $admin ?>">
                 <a href="./announce.php" class="nav-link"><i class="fa-solid fa-bullhorn"></i> ประชาสัมพันธ์</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?= $admin ?>">
                 <a href="" class="nav-link"><i class="fa-solid fa-bullhorn"></i> กิจกรรมโรงเรียน</a>
             </li>
+
+            <?php
+
+            if ($_SESSION['project'] == "HealthCare") {
+                $HealthCare = "nav-item";
+                $LearnTogether = "d-none";
+                $FunFest = "d-none";
+                $Subso = "d-none";
+                $Green = "d-none";
+            } else if ($_SESSION['project'] == "LearnTogether") {
+                $HealthCare = "d-none";
+                $LearnTogether = "nav-item";
+                $FunFest = "d-none";
+                $Subso = "d-none";
+                $Green = "d-none";
+            } else if ($_SESSION['project'] == "FunFest") {
+                $HealthCare = "d-none";
+                $LearnTogether = "d-none";
+                $FunFest = "nav-link";
+                $Subso = "d-none";
+                $Green = "d-none";
+            } else if ($_SESSION['project'] == "Subso") {
+                $HealthCare = "d-none";
+                $LearnTogether = "d-none";
+                $FunFest = "d-none";
+                $Subso = "nav-link";
+                $Green = "d-none";
+            } else if ($_SESSION['project'] == "GreenToGrow") {
+                $HealthCare = "d-none";
+                $LearnTogether = "d-none";
+                $FunFest = "d-none";
+                $Subso = "d-none";
+                $Green = "nav-link";
+            }
+
+            if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
+                $HealthCare = "nav-item";
+                $LearnTogether = "nav-item";
+                $FunFest = "nav-item";
+                $Subso = "nav-item";
+                $Green = "nav-item";
+            }
+
+            ?>
+
             <hr class="text-dark">
-            <li class="nav-item">
+
+            <li class="<?= $HealthCare ?>">
                 <a href="./WeHealthCare/index.php" class="nav-link"> YRC We HealthCare</a>
             </li>
-            <li class="nav-item">
+            <li class="<?= $LearnTogether ?>">
                 <a href="./LearnTogether/index.php" class="nav-link"> YRC WE LEARNTOGET(HER)</a>
             </li>
-            <li class="nav-item">
+            <li class="<?= $FunFest ?>">
                 <a href="./FunFestival/index.php" class="nav-link"> YRC Fun Festival SS.3</a>
             </li>
-            <li class="nav-item">
+            <li class="<?= $Subso ?>">
                 <a href="./WeSupportSocial/index.php" class="nav-link"> YRC WE SUP(PORT) SOCIAL</a>
             </li>
-            <li class="nav-item">
+            <li class="<?= $Green ?>">
                 <a href="./GreenToGrow/index.php" class="nav-link"> YRC Green to Grow</a>
             </li>
+
             <hr class="text-dark">
-            <li class="nav-item">
+            <li class="nav-item <?= $admin ?>">
                 <a href="./studentcouncial.php" class="nav-link"><i class="fa-solid fa-users"></i> หน้าสภานักเรียน</a>
                 <a href="./setting.php" class="nav-link"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
                 <a href="./menu.php" class="nav-link"><i class="fa-solid fa-toggle-on"></i> ปุ่มเมนู</a>
+                <a href="./user.php" class="nav-link"><i class="fa-solid fa-user"></i> จัดการผู้ใช้</a>
             </li>
             <hr class="text-dark">
             <li class="nav-item">
@@ -61,10 +134,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./index.php"><i class="fa-solid fa-house"></i> หน้าแรก</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?= $admin ?>">
                     <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-chalkboard"></i> โครงการ
                     </a>
@@ -75,15 +148,11 @@
                         <li><a class="dropdown-item" href="#">YRC WE SUP(PORT) SOCIAL</a></li>
                         <li><a class="dropdown-item" href="#">YRC Green to Grow</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li> -->
             </ul>
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
         </div>
     </div>
 </nav>

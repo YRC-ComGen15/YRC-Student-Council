@@ -108,75 +108,134 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </div>
             <!-- bookshelf -->
-                <div class="mt-5 container">
-                    <h1><b><i class="fa-solid fa-bullhorn"></i> รายการหนังสือทั้งหมด</b></h1>
+            <div class="mt-5 container">
+                <h1><b><i class="fa-solid fa-bullhorn"></i> รายการหนังสือทั้งหมด</b></h1>
 
-                    <div class="table-responsive mt-4">
-                        <table id="table" class="table table-row-bordered gy-5">
-                            <thead>
-                                <tr class="fw-semibold fs-6 text-muted">
-                                    <th>id</th>
-                                    <th>title</th>
-                                    <th>category</th>
+                <div class="table-responsive mt-4">
+                    <table id="table" class="table table-row-bordered gy-5">
+                        <thead>
+                            <tr class="fw-semibold fs-6 text-muted">
+                                <th>id</th>
+                                <th>title</th>
+                                <th>category</th>
 
-                                    <th>img</th>
-                                    <th>date</th>
-                                    <th>name</th>
-                                    <th>status</th>
-                                    <th>option</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                $sql = "SELECT * FROM learn_booksharing ORDER BY id DESC";
-                                $stmt = $pdo->query($sql);
-                                ?>
-                                <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                                    <tr>
-                                        <td><?php echo $row['id'] ?></td>
-                                        <td><?php echo $row['title'] ?></td>
-                                        <td><?php echo $row['category'] ?></td>
-
-                                        <td>
-                                            <img src="../../LearnTogether/BookCover/<?php echo $row['img'] ?>" class="w-100" alt="">
-                                        </td>
-                                        <td><?php echo $row['date'] ?></td>
-                                        <td><?php echo $row['name'] ?></td>
-
-                                        <?php
-
-                                        if ($row['status'] == "active") {
-                                            echo "<td class='text-success'>ยืนยันแล้ว</td>";
-                                        } else {
-                                            echo "<td class='text-danger'>ยังไม่ได้ยืนยัน</td>";
-                                        }
-
-                                        ?>
-
-                                        <td class="d-flex">
-                                            <a href="./process/submit-book.php?id=<?php echo $row['id'] ?>" class="btn btn-success m-auto"><i class="fa-solid fa-check"></i> ยืนยัน</a>
-                                            <a href="./process/del-book.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-xmark"></i> ปฎิเสธ</a>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-
-                            </tbody>
-                            <tfoot>
+                                <th>img</th>
+                                <th>date</th>
+                                <th>name</th>
+                                <th>status</th>
+                                <th>option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $sql = "SELECT * FROM learn_booksharing ORDER BY id DESC";
+                            $stmt = $pdo->query($sql);
+                            ?>
+                            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                                 <tr>
-                                    <th>id</th>
-                                    <th>title</th>
-                                    <th>category</th>
+                                    <td><?php echo $row['id'] ?></td>
+                                    <td><?php echo $row['title'] ?></td>
+                                    <td><?php echo $row['category'] ?></td>
 
-                                    <th>img</th>
-                                    <th>date</th>
-                                    <th>name</th>
-                                    <th>status</th>
-                                    <th>option</th>
+                                    <td>
+                                        <img src="../../LearnTogether/BookCover/<?php echo $row['img'] ?>" class="w-100" alt="">
+                                    </td>
+                                    <td><?php echo $row['date'] ?></td>
+                                    <td><?php echo $row['name'] ?></td>
+
+                                    <?php
+
+                                    if ($row['status'] == "active") {
+                                        echo "<td class='text-success'>ยืนยันแล้ว</td>";
+                                    } else {
+                                        echo "<td class='text-danger'>ยังไม่ได้ยืนยัน</td>";
+                                    }
+
+                                    ?>
+
+                                    <td class="d-flex">
+                                        <a href="./process/submit-book.php?id=<?php echo $row['id'] ?>" class="btn btn-success m-auto"><i class="fa-solid fa-check"></i> ยืนยัน</a>
+                                        <a href="./process/del-book.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-xmark"></i> ปฎิเสธ</a>
+                                    </td>
                                 </tr>
-                            </tfoot>
-                        </table>
-                    </div>
+                            <?php } ?>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>id</th>
+                                <th>title</th>
+                                <th>category</th>
+
+                                <th>img</th>
+                                <th>date</th>
+                                <th>name</th>
+                                <th>status</th>
+                                <th>option</th>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
+            </div>
+
+            <!-- bookshelf -->
+            <div class="mt-5 container">
+                <h1><b><i class="fa-solid fa-bullhorn"></i> กิจกรรมทั้งหมด</b></h1>
+                <a href="./add-post.php" class="btn btn-outline-success">เพิ่มกิจกรรม +</a>
+
+                <div class="table-responsive mt-4">
+                    <table id="table" class="table table-row-bordered gy-5">
+                        <thead>
+                            <tr class="fw-semibold fs-6 text-muted">
+                                <th>id</th>
+                                <th>title</th>
+                                <th>category</th>
+
+                                <th>img</th>
+                                <th>date</th>
+                                
+                                <th>option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $sql = "SELECT * FROM learn_activity ORDER BY id DESC";
+                            $stmt = $pdo->query($sql);
+                            ?>
+                            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                                <tr>
+                                    <td><?php echo $row['id'] ?></td>
+                                    <td><?php echo $row['title'] ?></td>
+                                    <td><?php echo $row['decp'] ?></td>
+
+                                    <td>
+                                        <img src="../../LearnTogether/post/<?= $row['img'] ?>" class="w-100" alt="">
+                                    </td>
+                                    <td><?php echo $row['date'] ?></td>
+
+                                    <td class="d-flex">
+                                        <a href="./edit-post.php?id=<?php echo $row['id'] ?>" class="btn btn-success m-auto"><i class="fa-solid fa-check"></i> แก้ไข</a>
+                                        <a href="./process/del-post.php?id=<?php echo $row['id'] ?>" class="btn btn-danger m-auto"><i class="fa-solid fa-xmark"></i> ลบ</a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>id</th>
+                                <th>title</th>
+                                <th>category</th>
+
+                                <th>img</th>
+                                <th>date</th>
+                                
+                                <th>option</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
         </div>
 
 

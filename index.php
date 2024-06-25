@@ -147,7 +147,7 @@ require_once("./config/conn.php");
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="#">
+                    <a href="./?status=coming">
                         <?php
 
                         $id = 2;
@@ -164,7 +164,7 @@ require_once("./config/conn.php");
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="#">
+                    <a href="./LearnTogether/">
                         <?php
 
                         $id = 1;
@@ -181,7 +181,7 @@ require_once("./config/conn.php");
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="#">
+                    <a href="./?status=coming">
                         <?php
 
                         $id = 3;
@@ -198,7 +198,7 @@ require_once("./config/conn.php");
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="#">
+                    <a href="./?status=coming">
                         <?php
 
                         $id = 4;
@@ -215,7 +215,7 @@ require_once("./config/conn.php");
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="#">
+                    <a href="./?status=coming">
                         <?php
 
                         $id = 5;
@@ -280,7 +280,7 @@ if (isset($_GET['status'])) {
     if ($_GET['status'] == 'coming') {
         echo '<script>Swal.fire({
   title: "Coming Soon !",
-  text: "เว็บกำลังจะเปิดตัวในไม่ช้า",
+  text: "เว็บกำลังจะเปิดตัวเร็วๆนี้",
   icon: "warning"
 });</script>';
     }

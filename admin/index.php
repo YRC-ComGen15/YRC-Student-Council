@@ -6,6 +6,8 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: ./login.php");
 }
+
+$name = $_SESSION['name'];
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +37,7 @@ if (!isset($_SESSION['username'])) {
     </header>
     <main>
         <div class="container mt-5">
-            <h1>Dashboard</h1>
+            <h1><b>สวัสดีคุณ</b> <?php echo $name ?></h1>
             <div class="box p-5">
                 <div class="row jusify-centent-center">
                     <div class="col-12 col-lg-5 box py-5 d-flex m-2">

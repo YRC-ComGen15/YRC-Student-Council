@@ -13,6 +13,9 @@ $user = $stmt->fetch();
 if ($_POST['password'] == $user['password']) {
     $_SESSION['UserID'] = $user['id'];
     $_SESSION['username'] = $user['username'];
+    $_SESSION['role'] = $user['role'];
+    $_SESSION['name'] = $user['name'];
+    $_SESSION['project'] = $user['project'];
     // echo "Login successful! Welcome, " . $_SESSION['username'];
     header("Location: ../index.php?a=success");
 } else {
