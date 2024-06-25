@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2024 at 04:47 PM
+-- Generation Time: Jun 25, 2024 at 05:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -30,15 +30,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `project` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'Nice2250', 'Nice2250');
+INSERT INTO `admin` (`id`, `username`, `password`, `role`, `name`, `project`) VALUES
+(1, 'Nice2250', 'Nice2250', 'โสตทัศนูปกรณ์', 'วีราวรรธนุ์ กันธิพันธ์', 'LearnTogether'),
+(7, '51834', '51834', 'สาราณี', 'วรปรัชญ์ หวลหงษ์', 'LearnTogether'),
+(8, '53367', '53367', 'สาราณี', 'ปุญญิศา สดใส', 'LearnTogether'),
+(9, '53421', '53421', 'โสคทัศนูปกรณ์', 'วีราวรรธนุ์ กันธิพันธ์', 'LearnTogether');
 
 -- --------------------------------------------------------
 
@@ -84,7 +90,7 @@ INSERT INTO `banner` (`id`, `project`, `files`) VALUES
 (2, 'We Health Care', '138317875320240616_085743.jpg'),
 (3, 'FunFestival', '45630422920240616_085455.png'),
 (4, 'WE SUPPORT SOCIAL', '168299123220240616_085839.png'),
-(5, 'Green to Grow', '57714871720240616_085753.PNG');
+(5, 'Green to Grow', '125170316220240625_170851.png');
 
 -- --------------------------------------------------------
 
@@ -105,6 +111,28 @@ CREATE TABLE `banner3` (
 INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
 (2, '162441859620240615_091141.JPG', '#'),
 (4, '4044132520240616_083539.JPG', 'https://google.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `learn_activity`
+--
+
+CREATE TABLE `learn_activity` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `decp` mediumtext NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `learn_activity`
+--
+
+INSERT INTO `learn_activity` (`id`, `title`, `decp`, `img`, `link`, `date`) VALUES
+(1, 'Junior Webmaster Camp ครั้งที่ 13 by ODT ต่อเวลารับสมัครแล้ว ', 'ขอเชิญน้อง ๆ มัธยมที่มีอายุระหว่าง 15 - 18 ปี\r\nมาร่วมเรียนรู้และค้นหาตัวเอง ในแวดวงเว็บไซต์และสื่อออนไลน์ตลอด 3 วัน 2 คืน\r\n.\r\nพร้อมยกขบวนความรู้แบบจัดเต็ม! มาให้เลือกสมัครถึง 4 สาขา\r\n🧡สาขาดีไซน์ (Web Design)\r\n💚สาขามาร์เก็ตติ้ง (Web Marketing)\r\n💙สาขาโปรแกรมมิ่ง (Web Programming)\r\n💛สาขาคอนเทนต์ (Web Content)\r\n.\r\nเคลียร์ตารางให้พร้อม แล้วพบกันในค่าย วันที่ 20 - 22 กรกฎาคม 2567\r\nณ คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง\r\n.\r\nอย่าพลาดโอกาสดี ๆ ที่จะเปลี่ยนชีวิตน้องไปตลาดกาล\r\nสมัครเลย! วันนี้ - 23 มิถุนายน 2567 เวลา 23.59 น.', '33674687520240625_153313.png', 'https://13.jwc.in.th/', '25-06-2024');
 
 -- --------------------------------------------------------
 
@@ -167,12 +195,12 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
-(2, 'https://google.com', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
+(2, './?status=coming', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
 (3, 'https://google.com', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
 (4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
 (5, 'https://google.com', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
 (6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
-(7, 'https://google.com', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
+(7, '#canlendar', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
 (8, 'https://google.com', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
 
 -- --------------------------------------------------------
@@ -257,6 +285,12 @@ ALTER TABLE `banner3`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `learn_activity`
+--
+ALTER TABLE `learn_activity`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `learn_booksharing`
 --
 ALTER TABLE `learn_booksharing`
@@ -300,7 +334,7 @@ ALTER TABLE `viewer`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `announce`
@@ -319,6 +353,12 @@ ALTER TABLE `banner`
 --
 ALTER TABLE `banner3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `learn_activity`
+--
+ALTER TABLE `learn_activity`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `learn_booksharing`
