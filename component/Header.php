@@ -1,7 +1,7 @@
 <script src="./Framework/bootstrap/js/bootstrap.bundle.js"></script>
 <nav class="navbar navbar-dark bg-pink fixed-top d-block d-lg-none">
     <div class="container-fluid">
-        <img src="./img/logo.png" class="logo" alt>
+        <img src="./img/logo.png" class="logo" alt="โลโก้สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
         <a class="navbar-brand" href="./index.php">YRC Student Council</a>
         <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -21,9 +21,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./all_project.php">โครงการ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.youtube.com/channel/UCsSoRfjQOGcYpt54uVltIsA">SCA TV</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./all_announce.php">ประชาสัมพันธ์</a>
@@ -61,9 +58,9 @@
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
-                        <a class="dropdown-toggle header-a nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="dropdown-toggle header-a nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-chalkboard"></i> โครงการ
-                        </a>
+                        </ิ>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./?status=coming">YRC We HealthCare</a></li>
                             <li><a class="dropdown-item" href="./learntogether/">YRC WE LEARNTOGET(HER)</a></li>

@@ -12,7 +12,7 @@
             <ul class="image-list">
                 <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                     <a href="./post.php?id=<?php echo $row['id'] ?>">
-                        <img class="image-item" src="./img/post/<?php echo $row['img'] ?>" alt="img-<?php echo $row['id'] ?>" />
+                        <img class="image-item" loading="lazy" src="./img/post/<?php echo $row['img'] ?>" alt="<?php echo $row['title'] ?>" />
                     </a>
                 <?php } ?>
             </ul>

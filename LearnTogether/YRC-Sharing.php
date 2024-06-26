@@ -12,13 +12,13 @@ require_once "../config/conn.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YRC Sharing - Learntogether</title>
 
-    <link rel="shortcut icon" href="../img/learntogether logo.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="../asset/css/index.css">
+    <link rel="shortcut icon" href="../img/learn-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="./form.css">
+
+    <link rel="stylesheet" href="../asset/css/index.css">
 </head>
 
 <body>
@@ -61,7 +61,6 @@ require_once "../config/conn.php";
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-
         function previewImage(event) {
             var preview = document.getElementById('preview');
             var file = event.target.files[0];

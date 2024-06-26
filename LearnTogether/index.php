@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Together</title>
 
-    <link rel="shortcut icon" href="../img/learntogether logo.png" type="image/x-icon">
-
-    <link rel="shortcut icon" href="../img/learntogether logo.pnggi" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/learn-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
 
@@ -17,24 +15,29 @@
 
 <body>
 
-    <div class="d-flex mt-5 mt-6">
-        <button id="share" class="m-auto mt-5 button">
-            <h1>SHARE หนังสือ</h1>
-        </button>
+    <div class="m-auto">
+        <div class="row mt-6 px-5 w-100 d-flex">
+            <div class="d-flex col-12">
+                <button id="share" class="m-auto mt-5 button w-100 text-center">
+                    <h1>SHARE หนังสือ</h1>
+                </button>
 
-    </div>
+            </div>
 
-    <div class="d-flex">
-        <a href="./activity.php" class="m-auto mt-5 button">
-            <h1>SHARE กิจกรรม</h1>
-        </a>
+            <div class="d-flex col-12">
+                <a href="./activity.php" class="m-auto mt-5 button w-100 text-center">
+                    <h1>SHARE กิจกรรม</h1>
+                </a>
 
-    </div>
+            </div>
 
-    <div class="d-flex">
-        <a href="https://www.youtube.com/@SCA_YRC_Official" class="m-auto mt-5 buttonn">
-            <h1>Youtube</h1>
-        </a>
+            <div class="d-flex col-12">
+                <a href="https://www.youtube.com/@SCA_YRC_Official" class="m-auto mt-5 buttonn w-100 text-center">
+                    <h1>Youtube</h1>
+                </a>
+
+            </div>
+        </div>
 
     </div>
 

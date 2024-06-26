@@ -14,7 +14,7 @@ require_once "../config/conn.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Sharing</title>
 
-    <link rel="shortcut icon" href="../img/learntogether logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/learn-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../Framework/bootstrap/css/bootstrap.min.css">
 

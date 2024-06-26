@@ -2,7 +2,7 @@
 <div class="w-100 d-block footer row py-4">
     <div class="row">
         <div class="col-12 col-lg-6 text-center">
-            <img src="./img/logo.png" class="footer-logo m-auto" alt="">
+            <img src="./img/logo.png" class="footer-logo m-auto" alt="โลโก้สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
             <p class="text-light">
                 สภานักเรียนโรงเรียนยุพราชวิทยาลัย <br>
                 Student Council Association Yupparaj Wittayalai School ( SCA YRC )

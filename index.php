@@ -18,6 +18,9 @@ require_once("./config/conn.php");
     <!-- icon -->
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
 
+    <!-- meta dec -->
+    <meta name="description" content="เว็บไซต์สภานักเรียนโรงเรียนยุพราชวิทบาลัย " />
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="./Framework/bootstrap/css/bootstrap.min.css">
     <script src="./Framework/bootstrap/js/bootstrap.bundle.js"></script>
@@ -49,33 +52,15 @@ require_once("./config/conn.php");
         ?>
         <!-- banner -->
         <div class="d-block w-100 mt-5">
-            <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
+            <img src="./img/banner/<?php echo $banner2['content']; ?>" loading="lazy" class="d-block w-100" alt="แบนเนอร์สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
         </div>
 
         <div class="d-block bg-pink w-100 text-light py-4 text-center">
-            <img src="./img/logo.png" width="100" height="100" class="mb-2" alt="">
+            <img src="./img/logo.png" width="100" height="100" class="mb-2" alt="โลโก้สภานักเรียน">
             <h3 class="w-100"><b class="w-100">"สภานักเรียน เรียนรู้ด้วยปัญญา พัฒนาศักยภาพ เสริมสร้างประชาธิปไตย"</b></h3>
             <h4>สภานักเรียนโรงเรียนยุพราชวิทยาลัย</h4>
             <h5>YRC Student Council Association</h5>
         </div>
-        <!-- banner -->
-        <!-- <div class="d-block w-100">
-            <?php
-
-            $banner2 = "banner2";
-
-            $sql = 'SELECT * FROM setting WHERE title = :title';
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(['title' => $banner2]);
-
-            // สำหรับการดึงข้อมูลแถวเดียว
-            $banner2 = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
-            ?>
-            <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
-        </div> -->
-
     </header>
 
     <main>
@@ -120,7 +105,7 @@ require_once("./config/conn.php");
                 <?php foreach ($images as $key => $image) : ?>
                     <div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
                         <a href="<?= $image['link'] ?>">
-                            <img src="./img/banner/<?= $image['img'] ?>" class="d-block w-100" alt="...">
+                            <img src="./img/banner/<?= $image['img'] ?>" loading="lazy" class="d-block w-100" alt="แบนเนอร์สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
                         </a>
                     </div>
                 <?php endforeach; ?>
@@ -160,7 +145,7 @@ require_once("./config/conn.php");
                         $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         ?>
-                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
+                        <img src="./img/banner/<?php echo $data['files'] ?>" loading="lazy" class="d-block w-100" alt="<?= $data['project'] ?>">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -177,7 +162,7 @@ require_once("./config/conn.php");
                         $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         ?>
-                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
+                        <img src="./img/banner/<?php echo $data['files'] ?>" loading="lazy" class="d-block w-100" alt="<?= $data['project'] ?>">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -194,7 +179,7 @@ require_once("./config/conn.php");
                         $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         ?>
-                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
+                        <img src="./img/banner/<?php echo $data['files'] ?>" loading="lazy" class="d-block w-100" alt="<?= $data['project'] ?>">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -211,7 +196,7 @@ require_once("./config/conn.php");
                         $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         ?>
-                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
+                        <img src="./img/banner/<?php echo $data['files'] ?>" loading="lazy" class="d-block w-100" alt="<?= $data['project'] ?>">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -228,7 +213,7 @@ require_once("./config/conn.php");
                         $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         ?>
-                        <img src="./img/banner/<?php echo $data['files'] ?>" class="d-block w-100" alt="...">
+                        <img src="./img/banner/<?php echo $data['files'] ?>" loading="lazy" class="d-block w-100" alt="<?= $data['project'] ?>">
                     </a>
                 </div>
             </div>
@@ -245,7 +230,7 @@ require_once("./config/conn.php");
         <!-- canlendar -->
         <div class="p-5" id="canlendar">
             <!-- <div id='calendar'></div> -->
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FBangkok&bgcolor=%23ff1493&title=%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99&showTz=0&showTitle=0&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FBangkok&bgcolor=%23ff1493&title=%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99&showTz=0&showTitle=0&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" title="calendar" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" loading="lazy" scrolling="no"></iframe>
         </div>
 
         <!-- ประชาสัมพันธ์ -->
