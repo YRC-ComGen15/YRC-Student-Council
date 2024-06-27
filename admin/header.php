@@ -115,6 +115,7 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
                 <a href="./setting.php" class="nav-link"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
                 <a href="./menu.php" class="nav-link"><i class="fa-solid fa-toggle-on"></i> ปุ่มเมนู</a>
                 <a href="./user.php" class="nav-link"><i class="fa-solid fa-user"></i> จัดการผู้ใช้</a>
+                <a href="./files.php" class="nav-link"><i class="fa-solid fa-file-pdf"></i> จัดการไฟล์</a>
             </li>
             <hr class="text-dark">
             <li class="nav-item">

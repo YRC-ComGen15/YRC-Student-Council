@@ -20,13 +20,13 @@
                         <a class="nav-link" href="./comment.php">แสดงความคิดเห็น</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./all_project.php">โครงการ</a>
+                        <a class="nav-link" href="./project.php">โครงการ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./all_announce.php">ประชาสัมพันธ์</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about.php">เกี่ยวกับเรา</a>
+                        <a class="nav-link" href="./student-council.php">เกี่ยวกับเรา</a>
                     </li>
 
                     <hr>
