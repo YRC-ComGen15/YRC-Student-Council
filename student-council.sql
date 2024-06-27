@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2024 at 05:15 PM
+-- Generation Time: Jun 27, 2024 at 02:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -110,7 +110,27 @@ CREATE TABLE `banner3` (
 
 INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
 (2, '162441859620240615_091141.JPG', '#'),
-(4, '4044132520240616_083539.JPG', 'https://google.com');
+(4, '4044132520240616_083539.JPG', 'https://google.com'),
+(5, '114692701620240627_021853.pdf', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `files`
+--
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL,
+  `file_name` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`id`, `file_name`, `date`) VALUES
+(3, '_Pitch deck.pdf', '27-06-2024');
 
 -- --------------------------------------------------------
 
@@ -196,7 +216,7 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
 (2, './?status=coming', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
-(3, 'https://google.com', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
+(3, './pdf/ระเบียบโรงเรียนยุพราชวิทยาลัย ว่าด้วยการไว้ทรงผมของนักเรียน พ.ศ.2567.pdf', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
 (4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
 (5, 'https://google.com', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
 (6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
@@ -285,6 +305,12 @@ ALTER TABLE `banner3`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `learn_activity`
 --
 ALTER TABLE `learn_activity`
@@ -352,7 +378,13 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `banner3`
 --
 ALTER TABLE `banner3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `learn_activity`
