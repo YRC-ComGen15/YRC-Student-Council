@@ -16,10 +16,10 @@ body {
 }
 
 body {
-    background-image: url(./Imge/paper-2631126.jpg);
-
+    background-image: url(./Imge/4.png);
+    background-size: 100vh 100vw;
     /* Full height */
-    min-height: 100%;
+    /* min-height: 100%; */
     /* Ensures the body is at least 100% of viewport height */
 
     /* Center and scale the image nicely */
@@ -28,6 +28,7 @@ body {
     background-size: cover;
     /* Scale the image to cover the entire background */
 }
+
 
 ::-webkit-scrollbar {
     background-color: white;
@@ -77,4 +78,33 @@ body {
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     color: darkblue;
+}
+
+.image-container {
+    position: relative;
+    /* ทำให้ element ภายในสามารถกำหนดตำแหน่งแบบสัมพันธ์ได้ */
+}
+
+.image {
+    position: absolute;
+    /* ทำให้ภาพสามารถซ้อนทับกันได้ */
+    /* กำหนดตำแหน่งและขนาดตามต้องการ */
+    top: 0;
+    left: 0;
+    width: 60%;
+}
+
+/* ปรับค่า top, left, width, height ของภาพที่สองในชุดแรก */
+.image-container:first-child .image:nth-child(2) {
+    /* ค่าตัวอย่าง */
+    top: 20px;
+    left: 10px;
+}
+
+/* ปรับค่าสำหรับภาพในชุดที่สอง */
+.image-container:nth-child(2) .image {
+    /* ค่าตัวอย่าง */
+    width: 80%;
+    margin: 0 auto;
+    /* จัดกลาง */
 }

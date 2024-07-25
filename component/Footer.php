@@ -10,8 +10,8 @@
 
         </div>
         <div class="col-12 col-lg-6 text-start text-light px-5 py-3">
-            <a href="mailto:yrcstudentcouncil@gmail.com" class="a-footer">
-                <h5><i class="fa-solid fa-envelope"></i> yrcstudentcouncil@gmail.com</h5>
+            <a href="mailto:sca@yupparaj.ac.th" class="a-footer">
+                <h5><i class="fa-solid fa-envelope"></i> sca@yupparaj.ac.th</h5>
             </a>
             <a href="https://www.facebook.com/Yupparaj.Committee" class="a-footer">
                 <h5><i class="fa-brands fa-facebook"></i> สภานักเรียนโรงเรียนยุพราชวิทยาลัย</h5>

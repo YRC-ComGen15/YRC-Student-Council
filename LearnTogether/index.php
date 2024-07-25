@@ -14,31 +14,26 @@
 </head>
 
 <body>
-
-    <div class="m-auto">
-        <div class="row mt-6 px-5 w-100 d-flex">
-            <div class="d-flex col-12">
-                <button id="share" class="m-auto mt-5 button w-100 text-center">
-                    <h1>SHARE หนังสือ</h1>
-                </button>
-
+    <div class="bg">
+        <div class="m-auto">
+            <div class="container mb-5">
+                <div class="image-container">
+                    <img src="./Imge/share.png" id="share" class="image">
+                    <a href="./activity.php">
+                        <img src="./Imge/10.png" class="image">
+                    </a>
+                </div>
             </div>
 
-            <div class="d-flex col-12">
-                <a href="./activity.php" class="m-auto mt-5 button w-100 text-center">
-                    <h1>SHARE กิจกรรม</h1>
+            <div class="image-container mt-5">
+                <a href="https://www.youtube.com/@SCA_YRC_Official">
+                    <img src="./Imge/11.png" class="image">
                 </a>
-
             </div>
 
-            <div class="d-flex col-12">
-                <a href="https://www.youtube.com/@SCA_YRC_Official" class="m-auto mt-5 buttonn w-100 text-center">
-                    <h1>Youtube</h1>
-                </a>
 
-            </div>
+            <img src="./Imge/3.png" class="w-100" alt="">
         </div>
-
     </div>
 
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
