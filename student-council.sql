@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2024 at 02:33 AM
+-- Generation Time: Aug 01, 2024 at 02:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `role`, `name`, `project`) VA
 (1, 'Nice2250', 'Nice2250', 'โสตทัศนูปกรณ์', 'วีราวรรธนุ์ กันธิพันธ์', 'LearnTogether'),
 (7, '51834', '51834', 'สาราณี', 'วรปรัชญ์ หวลหงษ์', 'LearnTogether'),
 (8, '53367', '53367', 'สาราณี', 'ปุญญิศา สดใส', 'LearnTogether'),
-(9, '53421', '53421', 'โสคทัศนูปกรณ์', 'วีราวรรธนุ์ กันธิพันธ์', 'LearnTogether');
+(9, '53421', '53421', 'โสตทัศนูปกรณ์', 'วีราวรรธนุ์ กันธิพันธ์', 'LearnTogether');
 
 -- --------------------------------------------------------
 
@@ -110,8 +110,7 @@ CREATE TABLE `banner3` (
 
 INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
 (2, '162441859620240615_091141.JPG', '#'),
-(4, '4044132520240616_083539.JPG', 'https://google.com'),
-(5, '114692701620240627_021853.pdf', '');
+(4, '4044132520240616_083539.JPG', 'https://google.com');
 
 -- --------------------------------------------------------
 
@@ -130,7 +129,7 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `file_name`, `date`) VALUES
-(3, '_Pitch deck.pdf', '27-06-2024');
+(4, 'ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', '01-08-2024');
 
 -- --------------------------------------------------------
 
@@ -215,7 +214,7 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
-(2, './?status=coming', 'คู่มือนักเรียน', '<i class=\"fa-solid fa-book\"></i>'),
+(2, './pdf/ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', 'ธรรมนูญโรงเรียน', '<i class=\"fa-solid fa-book\"></i>'),
 (3, './pdf/ระเบียบโรงเรียนยุพราชวิทยาลัย ว่าด้วยการไว้ทรงผมของนักเรียน พ.ศ.2567.pdf', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
 (4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
 (5, 'https://google.com', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
@@ -384,7 +383,7 @@ ALTER TABLE `banner3`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `learn_activity`
