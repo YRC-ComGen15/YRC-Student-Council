@@ -19,6 +19,7 @@ $grad5: darken($darktan, 4);
 /* For presentation's sake */
 body {
     background: lightgray;
+    background-image: url(./Imge/bg.jpg);
 }
 
 .bookshelf--frame {
