@@ -16,19 +16,33 @@
 <body>
     <div class="bg">
         <div class="m-auto">
-            <div class="container mb-5">
-                <div class="image-container">
-                    <img src="./Imge/share.png" id="share" class="image">
-                    <a href="./activity.php">
-                        <img src="./Imge/10.png" class="image">
-                    </a>
+
+            <div class="d-flex">
+                <div class="m-auto">
+                    <img src="./Imge/5.png" class="w-100">
                 </div>
             </div>
 
-            <div class="image-container mt-5">
-                <a href="https://www.youtube.com/@SCA_YRC_Official">
-                    <img src="./Imge/11.png" class="image">
-                </a>
+            <div class="mb-5 row w-100">
+                <div class="col-12 col-lg-6">
+                    <img src="./Imge/share.png" id="share" class="w-100" style="cursor: pointer;">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <a href="./activity.php">
+                        <img src="./Imge/10.png" class="w-100">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="https://www.youtube.com/@SCA_YRC_Official" class="d-flex">
+                        <div class="d-none d-lg-flex">
+                            <img src="./Imge/11.png" class="w-50 m-auto">
+                        </div>
+                        <div class="d-flex d-lg-none">
+                            <img src="./Imge/11.png" class="w-100 m-auto">
+                        </div>
+
+                    </a>
+                </div>
             </div>
 
 

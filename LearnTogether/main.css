@@ -17,15 +17,15 @@ body {
 
 body {
     background-image: url(./Imge/4.png);
-    background-size: 100vh 100vw;
+    /* background-size: 100vh 100vw; */
     /* Full height */
     /* min-height: 100%; */
     /* Ensures the body is at least 100% of viewport height */
 
     /* Center and scale the image nicely */
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     /* Scale the image to cover the entire background */
 }
 
