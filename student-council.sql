@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2024 at 02:36 AM
+-- Generation Time: Aug 06, 2024 at 02:23 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -66,8 +66,7 @@ CREATE TABLE `announce` (
 --
 
 INSERT INTO `announce` (`id`, `title`, `decp`, `img`, `date`, `edited`) VALUES
-(3, 'ทดสอบหัวข้อข่าว', 'ทดสอบรายละเอียดข่าว', '211371171420240614_102355.JPG', '14-06-2024', ''),
-(8, 'Test 2', 'ประชาสัมพันธ์ 2', '16532588020240615_084707.JPG', '2024-06-14', '15-06-2024');
+(9, 'ต้อนรับคณะศึกษาดูงานจาก โรงเรียนบุญวาทย์วิทยาลัย จังหวัดลำปาง', 'วันที่ ๒ สิงหาคม ๒๕๖๗\r\nงานกิจกรรมสภานักเรียน โรงเรียนยุพราชวิทยาลัย นำโดย\r\nนายธนพล กมลหัตถ์ รองผู้อำนวยการโรงเรียนยุพราชวิทยาลัย คณะผู้บริหาร คุณครูที่ปรึกษา และคณะกรรมการสภานักเรียนโรงเรียนยุพราชวิทยาลัย ให้การต้อนรับคณะศึกษาดูงานจาก โรงเรียนบุญวาทย์วิทยาลัย จังหวัดลำปาง ในโอกาสเข้าศึกษาดูงานด้านกิจกรรมสภานักเรียน โดยได้มีการลงนามบันทึกข้อตกลงความร่วมมือพัฒนางานสภานักเรียน (MOU) และร่วมพูดคุยแลกเปลี่ยนกิจกรรมของคณะกรรมการสภาทั้ง ๒ โรงเรียน ณ หอประชุมอาคารนวรัตน์ \r\nโรงเรียนยุพราชวิทยาลัย และกิจกรรมกีฬาสานสัมพันธ์ ณ โดมอาคารยุพราชรังสรรค์ โรงเรียนยุพราชวิทยาลัย\r\nภาพ / ข่าว : ฝ่ายโสตทัศนูปกรณ์และสารสนเทศ', '180232256020240806_022158.jpg', '06-08-2024', '06-08-2024');
 
 -- --------------------------------------------------------
 
@@ -129,7 +128,8 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `file_name`, `date`) VALUES
-(4, 'ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', '01-08-2024');
+(4, 'ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', '01-08-2024'),
+(5, 'SCA calendar.pdf', '05-08-2024');
 
 -- --------------------------------------------------------
 
@@ -216,10 +216,10 @@ INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
 (2, './pdf/ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', 'ธรรมนูญโรงเรียน', '<i class=\"fa-solid fa-book\"></i>'),
 (3, './pdf/ระเบียบโรงเรียนยุพราชวิทยาลัย ว่าด้วยการไว้ทรงผมของนักเรียน พ.ศ.2567.pdf', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
-(4, 'https://google.com', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
-(5, 'https://google.com', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
+(4, 'https://yupparaj.ac.th/yrc_map', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
+(5, 'https://drive.google.com/file/d/15wOY-CpJqlzmNU0nYvZ-8EhHRqdXdlCR/view', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
 (6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
-(7, '#canlendar', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
+(7, './pdf/SCA calendar.pdf', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
 (8, 'https://google.com', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
 
 -- --------------------------------------------------------
@@ -365,7 +365,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `announce`
 --
 ALTER TABLE `announce`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `banner`
@@ -383,7 +383,7 @@ ALTER TABLE `banner3`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `learn_activity`

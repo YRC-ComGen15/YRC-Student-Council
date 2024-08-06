@@ -230,7 +230,7 @@ require_once("./config/conn.php");
         <!-- canlendar -->
         <div class="p-5" id="canlendar">
             <!-- <div id='calendar'></div> -->
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FBangkok&bgcolor=%23ff1493&title=%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99&showTz=0&showTitle=0&src=dGgudGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" title="calendar" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" loading="lazy" scrolling="no"></iframe>
+            <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=c_590b5808308e6cbead76b7e0829fb28f74445f4ef21be01193c477f3df78d5cb%40group.calendar.google.com&ctz=Asia%2FBangkok" title="calendar" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" loading="lazy" scrolling="no"></iframe>
         </div>
 
         <!-- ประชาสัมพันธ์ -->
