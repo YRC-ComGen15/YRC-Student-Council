@@ -228,10 +228,7 @@ require_once("./config/conn.php");
         </div>
 
         <!-- canlendar -->
-        <div class="p-5" id="canlendar">
-            <!-- <div id='calendar'></div> -->
-            <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=c_590b5808308e6cbead76b7e0829fb28f74445f4ef21be01193c477f3df78d5cb%40group.calendar.google.com&ctz=Asia%2FBangkok" title="calendar" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" loading="lazy" scrolling="no"></iframe>
-        </div>
+        
 
         <!-- ประชาสัมพันธ์ -->
         <div class="p-5">
