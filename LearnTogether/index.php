@@ -25,14 +25,16 @@
 
             <div class="mb-5 row w-100">
                 <div class="col-12 col-lg-6">
-                    <img src="./Imge/share.png" id="share" class="w-100" style="cursor: pointer;">
+                    <a href="./bookshelf.php">
+                        <img src="./Imge/share.png" class="w-100" style="cursor: pointer;">
+                    </a>
                 </div>
                 <div class="col-12 col-lg-6">
                     <a href="./activity.php">
-                        <img src="./Imge/10.png" class="w-100">
+                        <img src="./Imge/11.png" class="w-100">
                     </a>
                 </div>
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <a href="https://www.youtube.com/@SCA_YRC_Official" class="d-flex">
                         <div class="d-none d-lg-flex">
                             <img src="./Imge/11.png" class="w-50 m-auto">
@@ -42,7 +44,7 @@
                         </div>
 
                     </a>
-                </div>
+                </div> -->
             </div>
 
 

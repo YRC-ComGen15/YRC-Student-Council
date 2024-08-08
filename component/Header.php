@@ -81,7 +81,7 @@
 
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="search" class="form-control" name="key" placeholder="ค้นหาโครงการ" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="search" class="form-control" name="keyword" placeholder="ค้นหาประชาสัมพันธ์" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </form>
         </div>

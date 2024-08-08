@@ -33,13 +33,13 @@ if ($upload != '') {
         
 
         // SQL insert
-        $stmt = $pdo->prepare("INSERT INTO learn_booksharing (title, category, decp, img, date, name) VALUES (:title, :category, :decp, :img, :date, :name)");
+        $stmt = $pdo->prepare("INSERT INTO learn_booksharing (title, category, decp, img, date, google_drive) VALUES (:title, :category, :decp, :img, :date, :link)");
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':category', $category, PDO::PARAM_STR);
         $stmt->bindParam(':decp', $decp, PDO::PARAM_STR);
         $stmt->bindParam(':img', $newname, PDO::PARAM_STR);
         $stmt->bindParam(':date', $date, PDO::PARAM_STR);
-        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+        $stmt->bindParam(':link', $name, PDO::PARAM_STR);
         $result = $stmt->execute();
 
         if ($result) {

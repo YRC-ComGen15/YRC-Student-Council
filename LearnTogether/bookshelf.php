@@ -79,9 +79,9 @@ require_once "../config/conn.php";
             ?>
             <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="book-wrapper">
-                    <button id="<?php echo $row['id'] ?>">
+                    <a href="">
                         <img src="./BookCover/<?php echo $row['img'] ?>" width="300" height="500" alt="A tall book">
-                    </button>
+                    </a>
                 </div>
             <?php } ?>
 

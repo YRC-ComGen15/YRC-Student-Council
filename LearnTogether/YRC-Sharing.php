@@ -49,8 +49,8 @@ require_once "../config/conn.php";
                 <?php } ?>
             </select>
 
-            <h5 class=mt-3><b>ชื่อ-นามสกุล ชั้น</b></h5>
-            <input type="text" placeholder="ชื่อ ชั้น ( มีหรือไม่มีคำนำหน้าก็ได้ )" name="name" class="form-control">
+            <h5 class=mt-3><b>หนังสือ Google drive</b></h5>
+            <input type="text" placeholder="https://drive.google.com" name="link" class="form-control">
 
             <input type="submit" class="mt-3 btn btn-success w-100" value="ส่ง">
         </form>
