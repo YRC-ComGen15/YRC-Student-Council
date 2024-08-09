@@ -110,6 +110,7 @@ if (!isset($_SESSION['username'])) {
             <!-- bookshelf -->
             <div class="mt-5 container">
                 <h1><b><i class="fa-solid fa-bullhorn"></i> รายการหนังสือทั้งหมด</b></h1>
+                <a href="../../LearnTogether/YRC-Sharing.php" class="btn btn-outline-success mt-3">เพิ่มหนังสือ +</a>
 
                 <div class="table-responsive mt-4">
                     <table id="table" class="table table-row-bordered gy-5">

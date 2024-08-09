@@ -29,7 +29,7 @@ if ($upload != '') {
         $title = $_POST['title'];
         $category = $_POST['category'];
         $decp = $_POST['decp'];
-        $name = $_POST['name'];
+        $name = $_POST['link'];
         
 
         // SQL insert

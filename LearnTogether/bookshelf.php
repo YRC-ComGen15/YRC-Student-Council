@@ -79,7 +79,7 @@ require_once "../config/conn.php";
             ?>
             <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="book-wrapper">
-                    <a href="">
+                    <a href="<?php echo $row['google_drive'] ?>">
                         <img src="./BookCover/<?php echo $row['img'] ?>" width="300" height="500" alt="A tall book">
                     </a>
                 </div>
