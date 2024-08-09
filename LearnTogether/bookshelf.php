@@ -85,9 +85,6 @@ require_once "../config/conn.php";
                 </div>
             <?php } ?>
 
-            
-
-           
         </div>
         <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
         <script src="../Framework/jq/jq.js">
