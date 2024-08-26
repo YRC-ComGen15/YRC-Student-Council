@@ -30,7 +30,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <a href="./activity.php">
+                    <a href="https://www.youtube.com/@SCA_YRC_Official">
                         <img src="./Imge/11.png" class="w-100">
                     </a>
                 </div>

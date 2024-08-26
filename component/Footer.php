@@ -17,7 +17,10 @@
                 <h5><i class="fa-brands fa-facebook"></i> สภานักเรียนโรงเรียนยุพราชวิทยาลัย</h5>
             </a>
             <a href="https://www.instagram.com/yrc_sca/" class="a-footer">
-                <h5><i class="fa-brands fa-instagram"></i></i> yrc_sca</h5>
+                <h5><i class="fa-brands fa-instagram"></i> yrc_sca</h5>
+            </a>
+            <a href="https://www.tiktok.com/@yrc.sca?_t=8oy2vUODSfS&_r=1" class="a-footer">
+                <h5><i class="fa-brands fa-tiktok"></i> yrc.sca</h5>
             </a>
             <p>อาคารเพชรรัตนราชสุดา (อาคาร 10 ) ชั้น 1 เลขที่ 238 ถนนพระปกเกล้า ตำบลศรีภูมิ <br>
 

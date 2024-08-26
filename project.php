@@ -55,7 +55,7 @@ require_once("./config/conn.php");
     </header>
 
     <main class="p-5">
-        <h1 class="text-center">โครงการต่างๆ</h1>
+        <h1 class="text-center">โครงการของสภานักเรียน</h1>
         <!-- MENU -->
         <div class="p-3 pt-0">
             <div class="row ">
