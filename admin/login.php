@@ -24,23 +24,36 @@
 
 <body>
 
-    <main class="d-flex h-100 mt-2 p-3">
-        <div class="m-auto justify-content-center">
-            <div class="d-flex">
+    <div class="container mt-5">
+        <div class="bg-light box ">
+            <div class="row">
+                <div class="col-6 d-none d-lg-block">
+                    <div class="carousel-inner h-100">
+                        <img src="./img/login_asset.jpg" class="img-fluid h-100" alt="banner">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-block p-5">
+                    <h1 class="text-center">ล็อกอินสำหรับสภานักเรียน</h1>
+                    <form action="./process/save_login.php" method="post">
+                        <div class="mt-5">
+                            <span class="mt-3 fs-5">Username</span>
+                            <input type="text" class="form-control mt-0" name="username" placeholder="ชื่อผู้ใช้">
+                        </div>
 
-                <img src="../img/logo.png" class="w-50 m-auto" alt="">
+                        <div class="mt-3">
+                            <span class="mt-5 fs-5">Password</span>
+                            <input type="password" class="form-control mt-0" name="password" placeholder="รหัสผ่าน    ">
+                        </div>
+
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary w-100">เข้าสู่ระบบ</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <h1 class="text-center mt-3">ล็อกอินผู้ดูแลระบบ</h1>
-            <form action="./process/save_login.php" method="post">
-                <p>username</p>
-                <input type="text" class="form-control" name="username" placeholder="username">
-                <p class="mt-3">password</p>
-                <input type="password" class="form-control" name="password" placeholder="password">
 
-                <input type="submit" value="Submit" class="btn btn-primary w-100 mt-3">
-            </form>
         </div>
-    </main>
+    </div>
 
     <!-- adminLTE -->
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>

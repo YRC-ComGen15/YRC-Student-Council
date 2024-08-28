@@ -69,7 +69,7 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                         $banner2 = $stmt->fetch(PDO::FETCH_ASSOC);
                         ?>
 
-                        <h3 class="mt-3">Banner สภานักเรียน2</h3>
+                        <!-- <h3 class="mt-3">Banner สภานักเรียน2</h3>
                         <div class="d-block box mt-3">
                             <a href="" class="m-auto">
                                 <img src="../img/banner/<?php echo isset($banner2['content']) ? htmlspecialchars($banner2['content']) : ''; ?>" class="w-100" alt="">
@@ -77,7 +77,7 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                             <div class="box-input">
                                 <input type="file" class="form-control" name="banner2" accept="image/png, image/gif, image/jpeg">
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- แบนเนอร์เลื่อน -->
                         <?php
@@ -85,7 +85,7 @@ $banner1 = $stmt->fetch(PDO::FETCH_ASSOC);
                         $stmt = $pdo->query($sql);
                         ?>
 
-                        <h3 class="mt-3">Banner สภานักเรียน2 <a href="./add-banner.php" class="btn btn-success">+</a></h3>
+                        <h3 class="mt-5">Banner สภานักเรียน2 <a href="./add-banner.php" class="btn btn-success">+</a></h3>
 
                         <div class="table-responsive mt-4">
                             <table id="table" class="table table-row-bordered gy-5">

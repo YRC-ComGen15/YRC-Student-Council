@@ -61,7 +61,7 @@ require_once("./config/conn.php");
             <div class="row ">
                 <!-- 1 -->
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php?status=coming" class="">
+                    <a href="./HealthCare/" class="">
                         <div class="carousel-inner round m-auto d-flex p-0">
                             <img src="./img/healthcare-logo.JPG" class="w-100 h-100" alt="">
                         </div>
@@ -81,7 +81,7 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php?status=coming" class="">
+                    <a href="./FunFestival/" class="">
                         <div class="carousel-inner round m-auto d-flex p-0">
                             <img src="./img/FunFest-logo.PNG" class="w-100 h-100" alt="">
                         </div>
@@ -91,7 +91,7 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php?status=coming">
+                    <a href="./SupportSocial/">
                         <div class="carousel-inner round m-auto d-flex p-0">
                             <img src="./img/Subso.JPG" class="w-100 h-100" alt="">
                         </div>
@@ -100,7 +100,7 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php?status=coming">
+                    <a href="./GreenToGrow/">
                         <div class="carousel-inner round m-auto d-flex p-0">
                             <img src="./img/Green2go-logo.png" class="w-100 h-100" alt="">
                         </div>
@@ -109,9 +109,9 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php?status=coming">
+                    <a href="./ZeroWaste/">
                         <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/logo.png" class="w-100 h-100" alt="">
+                            <img src="./img/Zerowaste.png" class="w-100 h-100" alt="">
                         </div>
                     </a>
                     <h4 class="text-center mt-2">Zero Waste</h4>

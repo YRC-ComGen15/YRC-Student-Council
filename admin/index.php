@@ -60,7 +60,7 @@ $name = $_SESSION['name'];
                         </div>
 
                     </div>
-                    <div class="col-12 p-5 box">
+                    <div class="col-12 p-5 box mt-5">
                         <canvas id="viewerChart">/canvas>
                     </div>
                 </div>

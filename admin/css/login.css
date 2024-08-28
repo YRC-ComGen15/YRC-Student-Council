@@ -1,3 +1,15 @@
-main {
-    background-image: url(../../img/4873152.jpg);
+body {
+    background-image: url(../../img/bg.jpg) !important;
+}
+
+.box {
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 5px 81px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 5px 81px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 5px 81px -9px rgba(0, 0, 0, 0.75);
+}
+
+img {
+    border-radius: 10px;
 }

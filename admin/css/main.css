@@ -5,10 +5,16 @@
 .box {
     background-color: white;
     border-radius: 15px;
-    border: 3px solid var(--color-primary);
+    -webkit-box-shadow: 7px 5px 33px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 5px 33px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 5px 33px -9px rgba(0, 0, 0, 0.75);
+
 }
 
 .box-input {
-    background-color: var(--color-primary);
     border-radius: 15px;
+}
+
+body {
+    background-image: url(../../img/bg.jpg) !important;
 }
