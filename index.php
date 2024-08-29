@@ -4,7 +4,7 @@ session_start();
 
 require_once("./config/conn.php");
 
-// include_once "./config/countViewer.php";
+require_once "./config/countViewer.php";
 
 ?>
 <!DOCTYPE html>

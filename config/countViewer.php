@@ -1,59 +1,32 @@
 <?php
-
-require_once "./conn.php";
-
-// Check if the "mobile" word exists in User-Agent 
-$isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
-
-// Check if the "tablet" word exists in User-Agent 
-$isTab = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "tablet"));
-
-// Platform check  
-$isWin = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "windows"));
-$isAndroid = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "android"));
-$isIPhone = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "iphone"));
-$isIPad = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "ipad"));
-$isIOS = $isIPhone || $isIPad;
-
-if ($isMob) {
-    if ($isTab) {
-        $device = "Tablet";
-    } else {
-        echo 'Using Mobile Device...';
-        $device = "Moblie";
-    }
-} else {
-    $device = "Desktop";
-}
-
-if ($isIOS) {
-    $os = "ios";
-} elseif ($isAndroid) {
-    $os = "androind";
-} elseif ($isWin) {
-    $os = "window";
-}
-
-echo $device;
-echo $os;
+// เชื่อมต่อฐานข้อมูล
+require_once "./config/conn.php";
 
 try {
-    // Prepare the SQL statement with placeholders for data
-    $sql = "INSERT INTO viewer (date, info, day) VALUES (:date, :info, :day)";
-    $stmt = $pdo->prepare($sql);
+    // กำหนดโหมดข้อผิดพลาดของ PDO เป็นข้อยกเว้น
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Get data to be inserted (replace with your data retrieval logic)
-    $date = date("d-m-Y");
-    $info = "Device:" . $device . " OS:" . $os;
-    $day = date("l");
+    // รับวันที่ปัจจุบันและวันที่ของสัปดาห์
+    $currentDate = date("Y-m-d");
+    $currentDayOfWeek = date("l"); // 'l' ให้วันที่เต็ม เช่น 'Monday'
 
-    // Bind the data to the placeholders
-    $stmt->bindParam(':date', $date);
-    $stmt->bindParam(':info', $info);
-    $stmt->bindParam(':day', $day);
-
-    // Execute the prepared statement
+    // ตรวจสอบว่ามีข้อมูลในวันปัจจุบันแล้วหรือยัง
+    $stmt = $pdo->prepare("SELECT * FROM visitors WHERE visit_date = :visit_date");
+    $stmt->bindParam(':visit_date', $currentDate);
     $stmt->execute();
+
+    if ($stmt->rowCount() > 0) {
+        // มีข้อมูลแล้ว เพิ่มค่า visit_count
+        $updateStmt = $pdo->prepare("UPDATE visitors SET visit_count = visit_count + 1 WHERE visit_date = :visit_date");
+        $updateStmt->bindParam(':visit_date', $currentDate);
+        $updateStmt->execute();
+    } else {
+        // ยังไม่มีข้อมูล เพิ่มรายการใหม่
+        $insertStmt = $pdo->prepare("INSERT INTO visitors (visit_date, day_of_week, visit_count) VALUES (:visit_date, :day_of_week, 1)");
+        $insertStmt->bindParam(':visit_date', $currentDate);
+        $insertStmt->bindParam(':day_of_week', $currentDayOfWeek);
+        $insertStmt->execute();
+    }
 } catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage();
 }

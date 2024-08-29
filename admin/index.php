@@ -8,6 +8,34 @@ if (!isset($_SESSION['username'])) {
 }
 
 $name = $_SESSION['name'];
+
+// เริ่มทำการเชื่อมต่อฐานข้อมูล
+require_once "../config/conn.php";
+
+try {
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // ดึงข้อมูลจำนวนผู้เข้าชมตามวันในสัปดาห์
+    $sql = "SELECT day_of_week, SUM(visit_count) as total_visits FROM visitors GROUP BY day_of_week ORDER BY FIELD(day_of_week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $weekly_visits = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // ดึงข้อมูลจำนวนผู้เข้าชมตามเดือน
+    $sql_month = "SELECT DATE_FORMAT(visit_date, '%M %Y') as month_year, SUM(visit_count) as total_visits FROM visitors GROUP BY month_year ORDER BY visit_date";
+    $stmt_month = $pdo->prepare($sql_month);
+    $stmt_month->execute();
+    $monthly_visits = $stmt_month->fetchAll(PDO::FETCH_ASSOC);
+
+    // ดึงข้อมูลจำนวนผู้เข้าชมทั้งหมด
+    $sql_total = "SELECT SUM(visit_count) as total_visits FROM visitors";
+    $stmt_total = $pdo->prepare($sql_total);
+    $stmt_total->execute();
+    $total_visits = $stmt_total->fetch(PDO::FETCH_ASSOC)['total_visits'];
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -40,48 +68,76 @@ $name = $_SESSION['name'];
             <h1><b>สวัสดีคุณ</b> <?php echo $name ?></h1>
             <div class="box p-5">
                 <div class="row jusify-centent-center">
-                    <div class="col-12 col-lg-5 box py-5 d-flex m-2">
+                    <div class="col-12 col-lg-12 box py-5 d-flex m-2">
                         <div class="d-block w-100">
                             <h3 class="m-3">จำนวนคนเข้าชมเว็บไซต์</h3>
                             <p class="mx-3">อัพเดทล่าสุดเมื่อ 23/5/2024</p>
                         </div>
                         <div class="d-flex w-100">
-                            <h1 class="m-auto text-center ">100</h1>
+                            <h1 class="m-auto text-center "><?php echo $total_visits; ?></h1>
                         </div>
-
                     </div>
-                    <div class="col-12 col-lg-5 box py-5 d-flex m-2">
-                        <div class="d-block w-100">
-                            <h3 class="m-3">จำนวนคนเข้าชมเว็บไซต์</h3>
-                            <p class="mx-3">อัพเดทล่าสุดเมื่อ 23/5/2024</p>
-                        </div>
-                        <div class="d-flex w-100">
-                            <h1 class="m-auto text-center ">100</h1>
-                        </div>
 
-                    </div>
                     <div class="col-12 p-5 box mt-5">
-                        <canvas id="viewerChart">/canvas>
+                        <h3>จำนวนผู้เข้าชมตามวันในสัปดาห์</h3>
+                        <canvas id="weeklyChart"></canvas>
+                    </div>
+
+                    <div class="col-12 p-5 box mt-5">
+                        <h3>จำนวนผู้เข้าชมตามเดือน</h3>
+                        <canvas id="monthlyChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
 
     <script>
-        const ctx = document.getElementById('viewerChart');
+        // Data for weekly chart
+        const weeklyLabels = <?php echo json_encode(array_column($weekly_visits, 'day_of_week')); ?>;
+        const weeklyData = <?php echo json_encode(array_column($weekly_visits, 'total_visits')); ?>;
 
-        new Chart(ctx, {
+        const ctxWeekly = document.getElementById('weeklyChart').getContext('2d');
+        new Chart(ctxWeekly, {
             type: 'bar',
             data: {
-                labels: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+                labels: weeklyLabels,
                 datasets: [{
-                    label: 'จำนวนการเข้าชม',
-                    data: [12, 19, 3, 5, 2, 3, 5],
-                    borderWidth: 1
+                    label: 'จำนวนการเข้าชม (ต่อวันในสัปดาห์)',
+                    data: weeklyData,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Data for monthly chart
+        const monthlyLabels = <?php echo json_encode(array_column($monthly_visits, 'month_year')); ?>;
+        const monthlyData = <?php echo json_encode(array_column($monthly_visits, 'total_visits')); ?>;
+
+        const ctxMonthly = document.getElementById('monthlyChart').getContext('2d');
+        new Chart(ctxMonthly, {
+            type: 'bar',
+            data: {
+                labels: monthlyLabels,
+                datasets: [{
+                    label: 'จำนวนการเข้าชม (ต่อเดือน)',
+                    data: monthlyData,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)'
                 }]
             },
             options: {
@@ -94,7 +150,7 @@ $name = $_SESSION['name'];
         });
     </script>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
