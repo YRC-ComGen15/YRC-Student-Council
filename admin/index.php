@@ -71,7 +71,7 @@ try {
                     <div class="col-12 col-lg-12 box py-5 d-flex m-2">
                         <div class="d-block w-100">
                             <h3 class="m-3">จำนวนคนเข้าชมเว็บไซต์</h3>
-                            <p class="mx-3">อัพเดทล่าสุดเมื่อ 23/5/2024</p>
+                            <p class="mx-3">อัพเดทล่าสุดเมื่อ <?php echo date("j/n/Y"); ?></p>
                         </div>
                         <div class="d-flex w-100">
                             <h1 class="m-auto text-center "><?php echo $total_visits; ?></h1>
@@ -87,6 +87,8 @@ try {
                         <h3>จำนวนผู้เข้าชมตามเดือน</h3>
                         <canvas id="monthlyChart"></canvas>
                     </div>
+                    <button id="resetButton" class="btn btn-danger mt-3">Reset ข้อมูลทั้งหมด</button>
+
                 </div>
             </div>
         </div>
@@ -149,6 +151,27 @@ try {
             }
         });
     </script>
+
+    <script>
+        document.getElementById('resetButton').addEventListener('click', function() {
+            Swal.fire({
+                title: 'คุณแน่ใจหรือไม่?',
+                text: "คุณต้องการรีเซ็ตข้อมูลทั้งหมดหรือไม่?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ใช่, ลบข้อมูล!',
+                cancelButtonText: 'ยกเลิก'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If confirmed, redirect to a PHP script to handle data deletion
+                    window.location.href = './reset_data.php';
+                }
+            });
+        });
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

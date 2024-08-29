@@ -54,7 +54,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="./comment.php"><i class="fa-solid fa-co   mment"></i> แสดงความคิดเห็น</a>
+                    <a class="nav-link" href="./comment.php"><i class="fa-solid fa-comment"></i> แสดงความคิดเห็น</a>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">

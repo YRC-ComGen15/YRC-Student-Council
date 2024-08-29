@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 09, 2024 at 06:05 AM
+-- Generation Time: Aug 29, 2024 at 03:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -61,6 +61,14 @@ CREATE TABLE `announce` (
   `edited` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `announce`
+--
+
+INSERT INTO `announce` (`id`, `title`, `decp`, `img`, `date`, `edited`) VALUES
+(3, 'ทดสอบหัวข้อข่าว', 'ทดสอบรายละเอียดข่าว', '211371171420240614_102355.JPG', '14-06-2024', ''),
+(8, 'Test 2', 'ประชาสัมพันธ์ 2', '16532588020240615_084707.JPG', '2024-06-14', '15-06-2024');
+
 -- --------------------------------------------------------
 
 --
@@ -95,6 +103,14 @@ CREATE TABLE `banner3` (
   `img` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `banner3`
+--
+
+INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
+(2, '162441859620240615_091141.JPG', '#'),
+(4, '4044132520240616_083539.JPG', 'https://google.com');
 
 -- --------------------------------------------------------
 
@@ -161,8 +177,7 @@ CREATE TABLE `learn_booksharing` (
 --
 
 INSERT INTO `learn_booksharing` (`id`, `title`, `category`, `decp`, `img`, `date`, `name`, `status`, `google_drive`) VALUES
-(1, 'ชีวิตเรามีแค่สี่พันสัปดาห์', 'หมวดหมู่ 1', 'เราสำรวจปรัชญาน่าทึ่งเกี่ยวกับเวลาและการบริหารเวลา ที่จะช่วยให้คุณมองเวลาชีวิตที่มีอยู่แค่ราวๆ 4000 พันสัปดาห์เปลี่ยนไปโดยสิ้นเชิง และปลดแอกตัวเองจาก “คำสาปของยุคโมเดิร์น” ที่เรียกร้องให้เรายัดทุกอย่างลงในเวลาที่มีอย่างมีประสิทธิภาพ ทำทุกอย่างให้เสร็จอย่างดี (getting thing done)  หนังสือทำให้เห็นว่า เราถูกตั้งโปรแกรมให้มีความคิดผิดเพี้ยนแค่ไหนเกี่ยวกับเวลา ความจริงด้านเวลาที่จะไม่มีวันเปลี่ยนแปลงคืออะไร พร้อมกับให้เครื่องมือที่ช่วยให้คุณได้สร้างชีวิตที่มีความหมาย ด้วยการยินดีโอบรับขีดจำกัดของชีวิต และเปลี่ยนแปลงสิ่งที่เราทำได้ในฐานะปัจเจก และสังคม', '1000255590_front_XXXL.jpg', '22-06-2024', 'วีราวรรธนุ์ กันธิพันธ์', 'active', ''),
-(4, 'ธรรมนูญโรงเรียนยุพราชวิทยาลัย', 'หมวดหมู่ 1', 'asdasdasd', '139703802920240809_060023.png', '09-08-2024', '', 'active', 'https://drive.google.com');
+(1, 'ชีวิตเรามีแค่สี่พันสัปดาห์', 'หมวดหมู่ 1', 'เราสำรวจปรัชญาน่าทึ่งเกี่ยวกับเวลาและการบริหารเวลา ที่จะช่วยให้คุณมองเวลาชีวิตที่มีอยู่แค่ราวๆ 4000 พันสัปดาห์เปลี่ยนไปโดยสิ้นเชิง และปลดแอกตัวเองจาก “คำสาปของยุคโมเดิร์น” ที่เรียกร้องให้เรายัดทุกอย่างลงในเวลาที่มีอย่างมีประสิทธิภาพ ทำทุกอย่างให้เสร็จอย่างดี (getting thing done)  หนังสือทำให้เห็นว่า เราถูกตั้งโปรแกรมให้มีความคิดผิดเพี้ยนแค่ไหนเกี่ยวกับเวลา ความจริงด้านเวลาที่จะไม่มีวันเปลี่ยนแปลงคืออะไร พร้อมกับให้เครื่องมือที่ช่วยให้คุณได้สร้างชีวิตที่มีความหมาย ด้วยการยินดีโอบรับขีดจำกัดของชีวิต และเปลี่ยนแปลงสิ่งที่เราทำได้ในฐานะปัจเจก และสังคม', '1000255590_front_XXXL.jpg', '22-06-2024', 'วีราวรรธนุ์ กันธิพันธ์', 'active', '');
 
 -- --------------------------------------------------------
 
@@ -203,10 +218,10 @@ INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (1, './student-council.php', 'สภานักเรียน', '<i class=\"fa-solid fa-users\"></i>'),
 (2, './pdf/ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', 'ธรรมนูญโรงเรียน', '<i class=\"fa-solid fa-book\"></i>'),
 (3, './pdf/ระเบียบโรงเรียนยุพราชวิทยาลัย ว่าด้วยการไว้ทรงผมของนักเรียน พ.ศ.2567.pdf', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
-(4, 'https://yupparaj.ac.th/yrc_map', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
+(4, 'https://www.yupparaj.ac.th/yrc_map/', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
 (5, 'https://drive.google.com/file/d/15wOY-CpJqlzmNU0nYvZ-8EhHRqdXdlCR/view', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
 (6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
-(7, './pdf/SCA calendar.pdf', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
+(7, '	./pdf/SCA calendar.pdf', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
 (8, 'https://google.com', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
 
 -- --------------------------------------------------------
@@ -252,15 +267,22 @@ INSERT INTO `studentcouncil` (`id`, `title`, `edited`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `viewer`
+-- Table structure for table `visitors`
 --
 
-CREATE TABLE `viewer` (
+CREATE TABLE `visitors` (
   `id` int(11) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `info` varchar(255) NOT NULL,
-  `day` varchar(255) NOT NULL
+  `visit_date` date NOT NULL,
+  `day_of_week` enum('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') NOT NULL,
+  `visit_count` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `visitors`
+--
+
+INSERT INTO `visitors` (`id`, `visit_date`, `day_of_week`, `visit_count`) VALUES
+(2, '2024-08-29', 'Thursday', 1);
 
 --
 -- Indexes for dumped tables
@@ -333,9 +355,9 @@ ALTER TABLE `studentcouncil`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `viewer`
+-- Indexes for table `visitors`
 --
-ALTER TABLE `viewer`
+ALTER TABLE `visitors`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -352,7 +374,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `announce`
 --
 ALTER TABLE `announce`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `banner`
@@ -409,10 +431,10 @@ ALTER TABLE `studentcouncil`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `viewer`
+-- AUTO_INCREMENT for table `visitors`
 --
-ALTER TABLE `viewer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `visitors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
