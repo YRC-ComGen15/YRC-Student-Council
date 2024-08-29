@@ -19,7 +19,10 @@ require_once "./config/countViewer.php";
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
 
     <!-- meta dec -->
-    <meta name="description" content="เว็บไซต์สภานักเรียนโรงเรียนยุพราชวิทบาลัย " />
+    <meta name="description" content="เว็บไซต์สภานักเรียนโรงเรียนยุพราชวิทยาลัย" />
+
+    <!-- meta keywords -->
+     <meta name="keyword" content="yupparaj, ยุพราชวิทยาลัย, สภานักเรียน, สภานักเรียนโรงเรียนยุพราชวิทยาลัย, YRC Student Council, Student, Council, เว็บไซต์, โรงเรียน, สภานักเรียน,">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="./Framework/bootstrap/css/bootstrap.min.css">
@@ -30,6 +33,11 @@ require_once "./config/countViewer.php";
 
     <!-- fontawsome -->
     <link rel="stylesheet" href="./Framework/fontawsome/css/all.css">
+
+    <!-- Meta OG -->
+    <meta property="og:title" content="YRC Student Council">
+    <meta property="og:description" content="เว็บไซต์สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
+    <meta property="og:image" content="./img/logo.png">
 
 </head>
 
@@ -75,7 +83,7 @@ require_once "./config/countViewer.php";
                 <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                     <div class=" col-6 col-lg-3 mt-3">
 
-                        <a href="<?php echo $row['link'] ?>" class="round m-auto d-flex">
+                        <a href="<?php echo $row['link'] ?>" class="round m-auto d-flex" rel=“nofollow”>
                             <p href="" class="m-auto text-round"><?php echo $row['icon'] ?></p>
                         </a>
                         <h4 class="text-center mt-2"><?php echo $row['title'] ?></h4>
@@ -104,7 +112,7 @@ require_once "./config/countViewer.php";
             <div class="carousel-inner">
                 <?php foreach ($images as $key => $image) : ?>
                     <div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
-                        <a href="<?= $image['link'] ?>">
+                        <a href="<?= $image['link'] ?>" rel=“nofollow”>
                             <img src="./img/banner/<?= $image['img'] ?>" loading="lazy" class="d-block w-100" alt="แบนเนอร์สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
                         </a>
                     </div>
@@ -132,7 +140,7 @@ require_once "./config/countViewer.php";
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="./?status=coming">
+                    <a href="./?status=coming" rel=“nofollow”>
                         <?php
 
                         $id = 2;
@@ -149,7 +157,7 @@ require_once "./config/countViewer.php";
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="./LearnTogether/">
+                    <a href="./LearnTogether/" rel=“nofollow”>
                         <?php
 
                         $id = 1;
@@ -166,7 +174,7 @@ require_once "./config/countViewer.php";
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="./?status=coming">
+                    <a href="./?status=coming" rel=“nofollow”>
                         <?php
 
                         $id = 3;
@@ -183,7 +191,7 @@ require_once "./config/countViewer.php";
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="./?status=coming">
+                    <a href="./?status=coming" rel=“nofollow”>
                         <?php
 
                         $id = 4;
@@ -200,7 +208,7 @@ require_once "./config/countViewer.php";
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="./?status=coming">
+                    <a href="./?status=coming" rel=“nofollow”>
                         <?php
 
                         $id = 5;
