@@ -7,7 +7,12 @@ if (!isset($_SESSION['username'])) {
     header("Location: ./login.php");
 }
 
-$name = $_SESSION['name'];
+if (!isset($_SESSION['name'])) {
+    header("Location: ./login.php");
+} else {
+    $name = $_SESSION['name'];
+}
+
 
 // เริ่มทำการเชื่อมต่อฐานข้อมูล
 require_once "../config/conn.php";

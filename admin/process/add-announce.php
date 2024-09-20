@@ -42,7 +42,7 @@ if ($upload != '') {
         if ($result) {
             header("Location: ../announce.php?a=success");
         } else {
-            header("Location: ../announce.php?a=error");
+            header(header: "Location: ../announce.php?a=error");
         }
     } else {
         header("Location: ../announce.php?a=error");

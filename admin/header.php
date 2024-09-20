@@ -38,13 +38,13 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
                 <a href="./index.php" class="nav-link"><i class="fa-solid fa-house"></i> หน้าแรก</a>
             </li>
             <li class="nav-item">
-                <a href="./index.php" class="nav-link"><i class="fa-solid fa-chart-simple"></i> ข้อมูลทางสถิติ</a>
+                <a href="./status.php" class="nav-link"><i class="fa-solid fa-chart-simple"></i> ข้อมูลทางสถิติ</a>
             </li>
             <li class="nav-item <?= $admin ?>">
                 <a href="./announce.php" class="nav-link"><i class="fa-solid fa-bullhorn"></i> ประชาสัมพันธ์</a>
             </li>
-            <li class="nav-item <?= $admin ?>">
-                <a href="" class="nav-link"><i class="fa-solid fa-bullhorn"></i> กิจกรรมโรงเรียน</a>
+            <li class="nav-item">
+                <a href="./summarize.php" class="nav-link"><i class="fa-solid fa-note-sticky"></i> สรุปการประชุม</a>
             </li>
 
             <?php
@@ -119,6 +119,10 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
             </li>
             <hr class="text-dark">
             <li class="nav-item">
+                <a href="./profile.php" class="nav-link"><i class="fa-solid fa-user"></i> บัญชีของฉัน</a>
+            </li>
+            <hr class="text-dark">
+            <li class="nav-item">
                 <a href="./process/logout.php" class="nav-link text-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i> ออกจากระบบ</a>
             </li>
         </ul>
@@ -136,7 +140,10 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
                     <a class="nav-link active" aria-current="page" href="./index.php"><i class="fa-solid fa-house"></i> หน้าแรก</a>
                 </li>
                 <li class="nav-item <?= $admin ?>">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
+                    <a class="nav-link" href="./setting.php"><i class="fa-solid fa-gear"></i> ตั้งค่าเว็บไซต์</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profile.php"><i class="fa-solid fa-user"></i> บัญชีของฉัน</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -153,6 +160,7 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li> -->
+
             </ul>
         </div>
     </div>

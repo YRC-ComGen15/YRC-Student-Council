@@ -62,11 +62,11 @@
                             <i class="fa-solid fa-chalkboard"></i> โครงการ
                         </ิ>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./?status=coming">YRC We HealthCare</a></li>
+                            <li><a class="dropdown-item" href="./HealthCare">YRC We HealthCare</a></li>
                             <li><a class="dropdown-item" href="./learntogether/">YRC WE LEARNTOGET(HER)</a></li>
-                            <li><a class="dropdown-item" href="./?status=coming">YRC Fun Festival SS.3</a></li>
-                            <li><a class="dropdown-item" href="./?status=coming">YRC WE SUP(PORT) SOCIAL</a></li>
-                            <li><a class="dropdown-item" href="./?status=coming">YRC Green to Grow</a></li>
+                            <li><a class="dropdown-item" href="./FunFestival">YRC Fun Festival SS.3</a></li>
+                            <li><a class="dropdown-item" href="./">YRC WE SUP(PORT) SOCIAL</a></li>
+                            <li><a class="dropdown-item" href="./">YRC Green to Grow</a></li>
                         </ul>
                     </div>
                 </li>
