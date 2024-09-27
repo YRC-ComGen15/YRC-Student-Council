@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2024 at 03:20 AM
+-- Generation Time: Sep 27, 2024 at 09:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -61,14 +61,6 @@ CREATE TABLE `announce` (
   `edited` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `announce`
---
-
-INSERT INTO `announce` (`id`, `title`, `decp`, `img`, `date`, `edited`) VALUES
-(3, 'ทดสอบหัวข้อข่าว', 'ทดสอบรายละเอียดข่าว', '211371171420240614_102355.JPG', '14-06-2024', ''),
-(8, 'Test 2', 'ประชาสัมพันธ์ 2', '16532588020240615_084707.JPG', '2024-06-14', '15-06-2024');
-
 -- --------------------------------------------------------
 
 --
@@ -103,14 +95,6 @@ CREATE TABLE `banner3` (
   `img` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `banner3`
---
-
-INSERT INTO `banner3` (`id`, `img`, `link`) VALUES
-(2, '162441859620240615_091141.JPG', '#'),
-(4, '4044132520240616_083539.JPG', 'https://google.com');
 
 -- --------------------------------------------------------
 
@@ -220,7 +204,7 @@ INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 (3, './pdf/ระเบียบโรงเรียนยุพราชวิทยาลัย ว่าด้วยการไว้ทรงผมของนักเรียน พ.ศ.2567.pdf', 'กฏระเบียบ', '<i class=\"fa-solid fa-people-group\"></i>'),
 (4, 'https://www.yupparaj.ac.th/yrc_map/', 'แผนที่โรงเรียน', '<i class=\"fa-solid fa-map\"></i>'),
 (5, 'https://drive.google.com/file/d/15wOY-CpJqlzmNU0nYvZ-8EhHRqdXdlCR/view', 'กิจกรรมโรงเรียน', '<i class=\"fa-solid fa-school\"></i>'),
-(6, './project.php', 'โครงการ', '<i class=\"fa-solid fa-chalkboard\"></i>'),
+(6, './project.php', 'โครงการของสภานักเรียน', '<i class=\"fa-solid fa-chalkboard\"></i>'),
 (7, '	./pdf/SCA calendar.pdf', 'ปฏิทิน', '<i class=\"fa-solid fa-calendar-days\"></i>'),
 (8, 'https://google.com', 'comment', '<i class=\"fa-solid fa-comments\"></i>');
 
@@ -262,7 +246,20 @@ CREATE TABLE `studentcouncil` (
 --
 
 INSERT INTO `studentcouncil` (`id`, `title`, `edited`, `img`) VALUES
-(1, 'โครงสร้างการบริหารกิจกรรมสภานักเรียนโรงเรียนยุพราชวิทยาลัย', '16-6-2024', '87182019520240616_092540.JPG');
+(1, 'โครงสร้างการบริหารกิจกรรมสภานักเรียนโรงเรียนยุพราชวิทยาลัย', '16-6-2024', '35762784420240829_154209.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `summarize`
+--
+
+CREATE TABLE `summarize` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -282,7 +279,7 @@ CREATE TABLE `visitors` (
 --
 
 INSERT INTO `visitors` (`id`, `visit_date`, `day_of_week`, `visit_count`) VALUES
-(2, '2024-08-29', 'Thursday', 1);
+(2, '2024-08-29', 'Thursday', 138);
 
 --
 -- Indexes for dumped tables
@@ -352,6 +349,12 @@ ALTER TABLE `setting`
 -- Indexes for table `studentcouncil`
 --
 ALTER TABLE `studentcouncil`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `summarize`
+--
+ALTER TABLE `summarize`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -428,6 +431,12 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT for table `studentcouncil`
 --
 ALTER TABLE `studentcouncil`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `summarize`
+--
+ALTER TABLE `summarize`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
