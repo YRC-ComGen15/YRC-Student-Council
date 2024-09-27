@@ -27,7 +27,7 @@ try {
     $weekly_visits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // ดึงข้อมูลจำนวนผู้เข้าชมตามเดือน
-    $sql_month = "SELECT DATE_FORMAT(visit_date, '%M %Y') as month_year, SUM(visit_count) as total_visits FROM visitors GROUP BY month_year ORDER BY visit_date";
+    $sql_month = "SELECT DATE_FORMAT(visit_date, '%M %Y') as month_year, SUM(visit_count) as total_visits FROM visitors GROUP BY DATE_FORMAT(visit_date, '%M %Y') ORDER BY MIN(visit_date)";
     $stmt_month = $pdo->prepare($sql_month);
     $stmt_month->execute();
     $monthly_visits = $stmt_month->fetchAll(PDO::FETCH_ASSOC);
