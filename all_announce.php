@@ -56,6 +56,7 @@ require_once "./config/conn.php";
         <div class="d-block w-100 mt-5">
             <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
         </div>
+        <marquee behavior="" direction="left">คำขวัญของสภานักเรียนโรงเรียนยุพราชวิทยาลัย "สภานักเรียน เรียนรู้ด้วยปัญญา พัฒนาศักยภาพ เสริมสร้างประชาธิปไตย" Student Council Association Yupparaj Wittayalai School ( SCA YRC )</marquee>
     </header>
 
     <main class="p-5">
@@ -98,4 +99,4 @@ require_once "./config/conn.php";
 
 </body>
 
-</html>โ
+</html>

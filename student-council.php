@@ -56,9 +56,10 @@ require_once "./config/conn.php";
         <div class="d-block w-100 mt-5">
             <img src="./img/banner/<?php echo $banner2['content']; ?>" class="d-block w-100" alt="">
         </div>
+        <marquee behavior="" direction="left">คำขวัญของสภานักเรียนโรงเรียนยุพราชวิทยาลัย "สภานักเรียน เรียนรู้ด้วยปัญญา พัฒนาศักยภาพ เสริมสร้างประชาธิปไตย" Student Council Association Yupparaj Wittayalai School ( SCA YRC )</marquee>
     </header>
 
-    <main class="p-5">
+    <main class="p-1">
         <?php
 
         $id=1;
@@ -72,18 +73,12 @@ require_once "./config/conn.php";
 
 
         ?>
-        <div class="border-menu">
-            <div class="top-menu">
-                <h4 class="text-white px-3 py-3"><?php echo $data['title'] ?></h4>
-            </div>
+        <div>
+        
             
-            <h6 class="px-4"><b>เขียนโดย </b> : ฝ่ายโสตทัศนูปกรณ์</h6>
-            <h6 class="px-4"><b>แก้ไขล่าสุดเมื่อ </b> : <?php echo $data['edited'] ?></h6>
-            <!-- MENU -->
-            <div class="p-5 pt-0">
-                <img src="./img/post/<?php echo $data['img'] ?>" class="w-100 rounded" alt="">
+                <img src="./img/post/<?php echo $data['img'] ?>" class="w-100 border-menu" alt="">
                 
-            </div>
+           
         </div>
     </main>
 

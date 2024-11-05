@@ -1,4 +1,5 @@
 <script src="./Framework/bootstrap/js/bootstrap.bundle.js"></script>
+<link rel="stylesheet" href="./asset/css/header.css">
 <nav class="navbar navbar-dark bg-pink fixed-top d-block d-lg-none">
     <div class="container-fluid">
         <img src="./img/logo.png" class="logo" alt="โลโก้สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
@@ -60,13 +61,13 @@
                     <div class="dropdown">
                         <button class="dropdown-toggle header-a nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-chalkboard"></i> โครงการ
-                        </ิ>
+                        </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./HealthCare">YRC We HealthCare</a></li>
+                            <li><a class="dropdown-item" href="./HealthCare/">YRC We HealthCare</a></li>
                             <li><a class="dropdown-item" href="./learntogether/">YRC WE LEARNTOGET(HER)</a></li>
-                            <li><a class="dropdown-item" href="./FunFestival">YRC Fun Festival SS.3</a></li>
-                            <li><a class="dropdown-item" href="./">YRC WE SUP(PORT) SOCIAL</a></li>
-                            <li><a class="dropdown-item" href="./">YRC Green to Grow</a></li>
+                            <li><a class="dropdown-item" href="./FunFestival/">YRC Fun Festival SS.3</a></li>
+                            <li><a class="dropdown-item" href="./SupportSocial/">YRC WE SUP(PORT) SOCIAL</a></li>
+                            <li><a class="dropdown-item" href="./GreenToGrow/">YRC Green to Grow</a></li>
                         </ul>
                     </div>
                 </li>
@@ -79,10 +80,13 @@
             </ul>
             <form action="./search.php" method="get" class="d-flex my-2 my-lg-0">
 
-                <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="search" class="form-control" name="keyword" placeholder="ค้นหาประชาสัมพันธ์" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="box-search">
+                    <form name="search">
+                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();" required >
+                    </form>
+                    <i class="fas fa-search box-search-i"></i>
                 </div>
+            
             </form>
         </div>
     </div>

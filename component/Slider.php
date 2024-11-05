@@ -6,7 +6,7 @@
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
             <?php
-            $sql = "SELECT * FROM announce";
+            $sql = "SELECT * FROM announce ORDER BY id DESC";
             $stmt = $pdo->query($sql);
             ?>
             <ul class="image-list">

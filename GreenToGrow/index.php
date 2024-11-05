@@ -15,6 +15,9 @@
 
     <img src="./content/1.png" class="w-100" alt="">
     <img src="./content/2.png" class="w-100" alt="">
+    <img src="./content/3.png" class="w-100" alt="">
+    <img src="./content/4.png" class="w-100" alt="">
+    <img src="./content/5.png" class="w-100" alt="">
 
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

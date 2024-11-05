@@ -22,7 +22,7 @@ require_once "./config/countViewer.php";
     <meta name="description" content="เว็บไซต์สภานักเรียนโรงเรียนยุพราชวิทยาลัย" />
 
     <!-- meta keywords -->
-     <meta name="keyword" content="yupparaj, ยุพราชวิทยาลัย, สภานักเรียน, สภานักเรียนโรงเรียนยุพราชวิทยาลัย, YRC Student Council, Student, Council, เว็บไซต์, โรงเรียน, สภานักเรียน,">
+    <meta name="keyword" content="yupparaj, ยุพราชวิทยาลัย, สภานักเรียน, สภานักเรียนโรงเรียนยุพราชวิทยาลัย, YRC Student Council, Student, Council, เว็บไซต์, โรงเรียน, สภานักเรียน,">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="./Framework/bootstrap/css/bootstrap.min.css">
@@ -38,6 +38,9 @@ require_once "./config/countViewer.php";
     <meta property="og:title" content="YRC Student Council">
     <meta property="og:description" content="เว็บไซต์สภานักเรียนโรงเรียนยุพราชวิทยาลัย">
     <meta property="og:image" content="./img/logo.png">
+
+    <!-- TailWindCSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
 </head>
 
@@ -55,7 +58,6 @@ require_once "./config/countViewer.php";
 
         // สำหรับการดึงข้อมูลแถวเดียว
         $banner2 = $stmt->fetch(PDO::FETCH_ASSOC);
-
 
         ?>
         <!-- banner -->
@@ -84,7 +86,7 @@ require_once "./config/countViewer.php";
                     <div class=" col-6 col-lg-3 mt-3">
 
                         <a href="<?php echo $row['link'] ?>" class="round m-auto d-flex" rel=“nofollow”>
-                            <p href="" class="m-auto text-round"><?php echo $row['icon'] ?></p>
+                            <p href="" class="m-auto "><?php echo $row['icon'] ?></p>
                         </a>
                         <h4 class="text-center mt-2"><?php echo $row['title'] ?></h4>
                     </div>
@@ -236,13 +238,13 @@ require_once "./config/countViewer.php";
         </div>
 
         <!-- canlendar -->
-        
+
 
         <!-- ประชาสัมพันธ์ -->
         <div class="p-5">
             <h1 class="text-center">ประชาสัมพันธ์</h1>
 
-            <?php include_once(".//component/Slider.php"); ?>
+            <?php include_once("./component/Slider.php"); ?>
 
         </div>
 

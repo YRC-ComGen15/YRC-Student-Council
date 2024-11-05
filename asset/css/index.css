@@ -1,6 +1,6 @@
 @font-face {
     font-family: ibm;
-    src: url(../../Framework/font/IBMPlexSansThai-Medium.ttf);
+    src: url(../../Framework/font/Anuphan-Medium.ttf);
 }
 
 :root {
@@ -42,6 +42,22 @@ html {
     height: 130px;
     width: 130px;
     box-shadow: 0 2px 4px darkslategray;
+    transition: .3s;
+}
+
+.round:hover {
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: 5px 5px 10px rgba(47, 79, 79, 0.662);
+}
+
+.round p {
+    color: var(--color-primary);
+    transition: .3s;
+}
+
+.round:hover p{
+    color: white !important;
 }
 
 .text-round {
@@ -55,4 +71,18 @@ html {
 .calendar {
     border-radius: 15px;
     padding-top: 1%;
+}
+
+marquee {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+}
+
+.dropdown-menu {
+    background-color: var(--color-primary);
+}
+
+.dropdown-item {
+    color: #fff;
 }

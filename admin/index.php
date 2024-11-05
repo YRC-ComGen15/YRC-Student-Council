@@ -62,6 +62,9 @@ try {
     <!-- icon -->
     <link rel="stylesheet" href="../Framework/fontawsome/css/all.css">
     <script src="../Framework/fontawsome/js/all.js"></script>
+
+    <!-- TailWindCss -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
