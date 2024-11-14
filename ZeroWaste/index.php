@@ -13,7 +13,8 @@
 
 <body>
 
-    <img src="./wallpaper.png" class="w-100" alt="">
+    <img src="./1.png" class="w-100" alt="">
+    <img src="./2.png" class="w-100" alt="">
 
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

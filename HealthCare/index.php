@@ -13,8 +13,10 @@
 
 <body>
 
-    <img src="./content/1.png" class="w-100" alt="">
-    <img src="./content/2.png" class="w-100" alt="">
+    <!-- <img src="./content/1.png" class="w-100" alt=""> -->
+     <video src="./1114.mp4" muted loop playsinline autoplay class="w-100 p-0 m-0"></video>
+    <img src="./content/2.png" class="w-100 m-0 p-0" alt="">
+    <img src="./content/o.png" class="w-100 m-0 p-0" alt="">
 
     <script src="../Framework/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
