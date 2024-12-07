@@ -93,7 +93,7 @@ require_once "./config/countViewer.php";
                 <?php } ?>
 
             </div>
-        </div>
+        </div
 
         <?php
 
@@ -104,6 +104,7 @@ require_once "./config/countViewer.php";
         // ผลลัพธ์จากการ query
         $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
         ?>
+        
         <!-- banner สภานักเรียนแบบเลื่อนได้ -->
         <div id="sca" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">

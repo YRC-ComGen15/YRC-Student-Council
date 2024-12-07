@@ -82,7 +82,7 @@ require_once("./config/conn.php");
                 </div>
 
                 <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./FunFestival/" class="">
+                    <a href="./project.php?status=coming" class="">
                         <div class="carousel-inner round m-auto d-flex p-0">
                             <img src="./img/FunFest-logo.PNG" class="w-100 h-100" alt="">
                         </div>
