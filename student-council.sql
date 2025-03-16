@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 07, 2024 at 05:48 AM
+-- Generation Time: Mar 16, 2025 at 05:02 AM
 -- Server version: 8.0.35
 -- PHP Version: 8.2.20
 
@@ -114,7 +114,10 @@ CREATE TABLE `files` (
 
 INSERT INTO `files` (`id`, `file_name`, `date`) VALUES
 (4, 'ธรรมนูญโรงเรียนยุพราชวิทยาลัย-2566.pdf', '01-08-2024'),
-(5, 'SCA calendar.pdf', '05-08-2024');
+(5, 'SCA calendar.pdf', '05-08-2024'),
+(6, 'b5b95b65543dbf31ecec806d43cecbca.png', '16-03-2025'),
+(7, 'b5b95b65543dbf31ecec806d43cecbca.png', '16-03-2025'),
+(8, 'b5b95b65543dbf31ecec806d43cecbca.png', '16-03-2025');
 
 -- --------------------------------------------------------
 
@@ -211,6 +214,27 @@ INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `project`
+--
+
+CREATE TABLE `project` (
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `project`
+--
+
+INSERT INTO `project` (`id`, `title`, `link`, `icon`) VALUES
+(1, 'โครงการที่ 1', 'https://www.google.com', '1742099754_ตราสภานักเรียน.png'),
+(2, 'โครงการที่ 2 Facebook', 'https://facebook.com', 'img_67d659941f82a3.63906542.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `setting`
 --
 
@@ -292,7 +316,9 @@ INSERT INTO `visitors` (`id`, `visit_date`, `day_of_week`, `visit_count`) VALUES
 (12, '2024-11-14', 'Thursday', 6),
 (13, '2024-11-15', 'Friday', 1),
 (14, '2024-12-06', 'Friday', 1),
-(15, '2024-12-07', 'Saturday', 1);
+(15, '2024-12-07', 'Saturday', 1),
+(16, '2025-03-15', 'Saturday', 1),
+(17, '2025-03-16', 'Sunday', 11);
 
 --
 -- Indexes for dumped tables
@@ -353,6 +379,12 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `project`
+--
+ALTER TABLE `project`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `setting`
 --
 ALTER TABLE `setting`
@@ -408,7 +440,7 @@ ALTER TABLE `banner3`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `learn_activity`
@@ -435,6 +467,12 @@ ALTER TABLE `menu`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `project`
+--
+ALTER TABLE `project`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
@@ -456,7 +494,7 @@ ALTER TABLE `summarize`
 -- AUTO_INCREMENT for table `visitors`
 --
 ALTER TABLE `visitors`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
