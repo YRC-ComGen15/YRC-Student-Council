@@ -94,6 +94,9 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
             <hr class="text-dark">
 
             <li class="<?= $HealthCare ?>">
+                <a href="./project.php" class="nav-link"> จัดการโครงการ</a>
+            </li>
+            <!-- <li class="<?= $HealthCare ?>">
                 <a href="./WeHealthCare/index.php" class="nav-link"> YRC We HealthCare</a>
             </li>
             <li class="<?= $LearnTogether ?>">
@@ -107,7 +110,7 @@ if ($_SESSION['role'] == 'โสตทัศนูปกรณ์') {
             </li>
             <li class="<?= $Green ?>">
                 <a href="./GreenToGrow/index.php" class="nav-link"> YRC Green to Grow</a>
-            </li>
+            </li> -->
 
             <hr class="text-dark">
             <li class="nav-item <?= $admin ?>">

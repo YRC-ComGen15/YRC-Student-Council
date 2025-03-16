@@ -71,7 +71,7 @@ try {
                     <div class="col-12 col-lg-12 box py-5 d-flex m-2">
                         <div class="d-block w-100">
                             <h3 class="m-3"><?= $name ?></h3>
-                            <h5 class="mx-3">ฝ่าย : <?= $_SESSION['role'] ?> โครงการ : <?= $_SESSION['project'] ?></h5>
+                            <h5 class="mx-3"><b class="h4">ฝ่าย :</b> <?= $_SESSION['role'] ?> <b class="h4">โครงการ :</b> <?= $_SESSION['project'] ?></h5>
                         </div>
                         <div class="d-flex w-100">
                             <img src="../img/logo.png" class="m-auto" width="120" height="120" alt="">

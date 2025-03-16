@@ -60,65 +60,22 @@ require_once("./config/conn.php");
         <!-- MENU -->
         <div class="p-3 pt-0">
             <div class="row ">
-                <!-- 1 -->
-                <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./HealthCare/" class="">
-                        <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/healthcare-logo.JPG" class="w-100 h-100" alt="">
-                        </div>
+                <?php
+                $sql = "SELECT * FROM project";
+                $stmt = $pdo->query($sql);
+                ?>
+                <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <!-- 1 -->
+                    <div class=" col-6 col-lg-4 mt-3">
+                        <a href="<?=$row['link'] ?>" class="">
+                            <div class="carousel-inner round m-auto d-flex p-0">
+                                <img src="./img/<?=$row['icon'] ?>" class="w-100 h-100" alt="">
+                            </div>
 
-                    </a>
-                    <h4 class="text-center mt-2">We Healthcare</h4>
-                </div>
-
-                <div class=" col-6 col-lg-4 mt-3 ">
-                    <a href="./LearnTogether/" class="">
-                        <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/learn-logo.png" class="w-100 h-100" alt="">
-                        </div>
-
-                    </a>
-                    <h4 class="text-center mt-2">We Learn Together</h4>
-                </div>
-
-                <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./project.php?status=coming" class="">
-                        <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/FunFest-logo.PNG" class="w-100 h-100" alt="">
-                        </div>
-
-                    </a>
-                    <h4 class="text-center mt-2">FUN Festival</h4>
-                </div>
-
-                <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./SupportSocial/">
-                        <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/Subso.JPG" class="w-100 h-100" alt="">
-                        </div>
-                    </a>
-                    <h4 class="text-center mt-2">WE SUPPORT SOCIAL</h4>
-                </div>
-
-                <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./GreenToGrow/">
-                        <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/Green2go-logo.png" class="w-100 h-100" alt="">
-                        </div>
-                    </a>
-                    <h4 class="text-center mt-2">Green to grow</h4>
-                </div>
-
-                <div class=" col-6 col-lg-4 mt-3">
-                    <a href="./ZeroWaste/">
-                        <div class="carousel-inner round m-auto d-flex p-0">
-                            <img src="./img/Zerowaste.png" class="w-100 h-100" alt="">
-                        </div>
-                    </a>
-                    <h4 class="text-center mt-2">Zero Waste</h4>
-                </div>
-
-
+                        </a>
+                        <h4 class="text-center mt-2"> <?=$row['title'] ?></h4>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </main>

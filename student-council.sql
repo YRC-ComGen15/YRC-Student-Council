@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 27, 2024 at 09:20 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:8889
+-- Generation Time: Dec 07, 2024 at 05:48 AM
+-- Server version: 8.0.35
+-- PHP Version: 8.2.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `project` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `role` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `project` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -53,12 +53,12 @@ INSERT INTO `admin` (`id`, `username`, `password`, `role`, `name`, `project`) VA
 --
 
 CREATE TABLE `announce` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `decp` mediumtext NOT NULL,
-  `img` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `edited` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `decp` mediumtext COLLATE utf8mb4_general_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `edited` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -68,9 +68,9 @@ CREATE TABLE `announce` (
 --
 
 CREATE TABLE `banner` (
-  `id` int(11) NOT NULL,
-  `project` varchar(255) NOT NULL,
-  `files` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `project` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `files` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -91,9 +91,9 @@ INSERT INTO `banner` (`id`, `project`, `files`) VALUES
 --
 
 CREATE TABLE `banner3` (
-  `id` int(11) NOT NULL,
-  `img` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -103,9 +103,9 @@ CREATE TABLE `banner3` (
 --
 
 CREATE TABLE `files` (
-  `id` int(11) NOT NULL,
-  `file_name` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `file_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -123,12 +123,12 @@ INSERT INTO `files` (`id`, `file_name`, `date`) VALUES
 --
 
 CREATE TABLE `learn_activity` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `decp` mediumtext NOT NULL,
-  `img` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `decp` mediumtext COLLATE utf8mb4_general_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -145,15 +145,15 @@ INSERT INTO `learn_activity` (`id`, `title`, `decp`, `img`, `link`, `date`) VALU
 --
 
 CREATE TABLE `learn_booksharing` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `decp` mediumtext NOT NULL,
-  `img` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL,
-  `google_drive` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `category` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `decp` mediumtext COLLATE utf8mb4_general_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `google_drive` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -170,8 +170,8 @@ INSERT INTO `learn_booksharing` (`id`, `title`, `category`, `decp`, `img`, `date
 --
 
 CREATE TABLE `learn_category` (
-  `id` int(11) NOT NULL,
-  `category` varchar(11) NOT NULL
+  `id` int NOT NULL,
+  `category` varchar(11) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -188,10 +188,10 @@ INSERT INTO `learn_category` (`id`, `category`) VALUES
 --
 
 CREATE TABLE `menu` (
-  `id` int(11) NOT NULL,
-  `link` varchar(255) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `icon` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -215,9 +215,9 @@ INSERT INTO `menu` (`id`, `link`, `title`, `icon`) VALUES
 --
 
 CREATE TABLE `setting` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `content` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -235,10 +235,10 @@ INSERT INTO `setting` (`id`, `title`, `content`) VALUES
 --
 
 CREATE TABLE `studentcouncil` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `edited` varchar(255) NOT NULL,
-  `img` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `edited` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -255,10 +255,10 @@ INSERT INTO `studentcouncil` (`id`, `title`, `edited`, `img`) VALUES
 --
 
 CREATE TABLE `summarize` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -268,10 +268,10 @@ CREATE TABLE `summarize` (
 --
 
 CREATE TABLE `visitors` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `visit_date` date NOT NULL,
-  `day_of_week` enum('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') NOT NULL,
-  `visit_count` int(11) DEFAULT 1
+  `day_of_week` enum('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') COLLATE utf8mb4_general_ci NOT NULL,
+  `visit_count` int DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -279,7 +279,20 @@ CREATE TABLE `visitors` (
 --
 
 INSERT INTO `visitors` (`id`, `visit_date`, `day_of_week`, `visit_count`) VALUES
-(2, '2024-08-29', 'Thursday', 138);
+(2, '2024-08-29', 'Thursday', 138),
+(3, '2024-10-03', 'Thursday', 22),
+(4, '2024-10-04', 'Friday', 62),
+(5, '2024-10-05', 'Saturday', 1),
+(6, '2024-10-09', 'Wednesday', 1),
+(7, '2024-10-19', 'Saturday', 501),
+(8, '2024-10-21', 'Monday', 24),
+(9, '2024-10-29', 'Tuesday', 4),
+(10, '2024-11-04', 'Monday', 3),
+(11, '2024-11-13', 'Wednesday', 1),
+(12, '2024-11-14', 'Thursday', 6),
+(13, '2024-11-15', 'Friday', 1),
+(14, '2024-12-06', 'Friday', 1),
+(15, '2024-12-07', 'Saturday', 1);
 
 --
 -- Indexes for dumped tables
@@ -371,79 +384,79 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `announce`
 --
 ALTER TABLE `announce`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `banner3`
 --
 ALTER TABLE `banner3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `learn_activity`
 --
 ALTER TABLE `learn_activity`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `learn_booksharing`
 --
 ALTER TABLE `learn_booksharing`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `learn_category`
 --
 ALTER TABLE `learn_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `studentcouncil`
 --
 ALTER TABLE `studentcouncil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `summarize`
 --
 ALTER TABLE `summarize`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `visitors`
 --
 ALTER TABLE `visitors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

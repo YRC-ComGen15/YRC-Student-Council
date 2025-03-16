@@ -63,12 +63,15 @@
                             <i class="fa-solid fa-chalkboard"></i> โครงการ
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./HealthCare/">YRC We HealthCare</a></li>
-                            <li><a class="dropdown-item" href="./learntogether/">YRC WE LEARNTOGET(HER)</a></li>
-                            <li><a class="dropdown-item" href="./FunFestival/">YRC Fun Festival SS.3</a></li>
-                            <li><a class="dropdown-item" href="./SupportSocial/">YRC WE SUP(PORT) SOCIAL</a></li>
-                            <li><a class="dropdown-item" href="./GreenToGrow/">YRC Green to Grow</a></li>
+                            <?php
+                            $sql = "SELECT * FROM project";
+                            $stmt = $pdo->query($sql);
+                            ?>
+                            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                                <li><a class="dropdown-item" href="<?= $row['link'] ?>"><?= $row['title'] ?></a></li>
+                            <?php } ?>
                         </ul>
+
                     </div>
                 </li>
                 <li class="nav-item">
@@ -82,11 +85,11 @@
 
                 <div class="box-search">
                     <form name="search">
-                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();" required >
+                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();" required>
                     </form>
                     <i class="fas fa-search box-search-i"></i>
                 </div>
-            
+
             </form>
         </div>
     </div>
